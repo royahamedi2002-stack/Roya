@@ -1,0 +1,1296 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roya Hamedi · AI &amp; Data Engineer</title>
+<meta name="description" content="Roya Hamedi (رویا حامدی): computer engineering student at the University of Zanjan in AI, data science and robotics. Voice-based diabetes risk screening, iris image analysis, data engineering. Open to research and graduate study.">
+<meta name="theme-color" content="#090D1C" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Roya Hamedi · AI &amp; Data Engineer">
+<meta property="og:description" content="Machine learning for signals, images and language. Voice biomarkers, iris recognition, data engineering.">
+<meta property="og:image" content="assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23090D1C'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%238FA2FF' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23F4A9BA'/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Roya Hamedi", "alternateName": "رویا حامدی", "jobTitle": "AI & data engineer", "description": "Computer engineering student working on machine learning for voice biomarkers, iris recognition and data engineering.", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Zanjan"}, "knowsAbout": ["Machine learning", "Voice biomarkers", "Iris recognition", "Computer vision", "Data engineering", "Robotics", "Kalman filtering", "Image processing", "Audio and signal processing", "Digital health"], "knowsLanguage": ["fa", "en", "tr", "de"], "award": ["4th place, Technology Olympiad 2025", "Best project, China competition 2026", "1st place, Iran Elites competitions 2026-2027"], "email": "missroyahamedi@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Tabriz", "addressCountry": "IR"}}</script>
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600&family=Vazirmatn:wght@300;400;500;700;800&display=swap">
+<style>
+/* Roya Hamedi: a calm research-journal portfolio.
+   One accent, one serif for headings, one sans for interface, no photos.
+   The only motion is the demos themselves. */
+:root {
+  --bg: #090D1C; --bg2: #0E1430; --surface: #121938; --surface2: #1A2350;
+  --ink: #EEF0FB; --muted: #9BA4C8; --line: #252E5C;
+  --accent: #8FA2FF; --accent2: #F4A9BA; --on-accent: #090D1C;
+  --f-display: "Newsreader", "Vazirmatn", Georgia, serif;
+  --f-body: "Figtree", "Vazirmatn", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", "Vazirmatn", ui-monospace, monospace;
+  --r: 14px; --rs: 10px;
+  color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --bg: #F4F5FB; --bg2: #E9EBF7; --surface: #FFFFFF; --surface2: #E1E5FA;
+  --ink: #10163A; --muted: #586188; --line: #CCD1EA;
+  --accent: #3347E6; --accent2: #A32748; --on-accent: #FFFFFF; color-scheme: light;
+}
+html[lang="fa"] {
+  --f-display: "Vazirmatn", "Newsreader", serif;
+  --f-body: "Vazirmatn", "Figtree", system-ui, sans-serif;
+  --f-mono: "Vazirmatn", "JetBrains Mono", monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 17px; line-height: 1.7; margin: 0; -webkit-font-smoothing: antialiased; }
+html[lang="fa"] .en, html[lang="en"] .fa { display: none !important; }
+.wrap { width: 100%; max-width: 1160px; margin-inline: auto; padding-inline: 24px; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+section[id] { scroll-margin-top: 84px; }
+.skip { position: fixed; inset-inline-start: 12px; top: -60px; z-index: 300; background: var(--accent); color: var(--on-accent); padding: 10px 18px; border-radius: var(--rs); font-weight: 600; text-decoration: none; transition: top .2s; }
+.skip:focus { top: 12px; }
+.progress { position: fixed; top: 0; inset-inline: 0; height: 2px; z-index: 70; pointer-events: none; }
+.progress i { display: block; height: 100%; width: 0; background: var(--accent); }
+
+/* ---- navigation ---- */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 600; font-size: 16px; }
+.logo i { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); display: grid; place-items: center; font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: .02em; color: var(--accent); }
+.links { display: flex; align-items: center; gap: 26px; font-size: 15px; color: var(--muted); }
+.links a { text-decoration: none; transition: color .2s; }
+.links a:hover { color: var(--ink); }
+.tools { display: flex; align-items: center; gap: 8px; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: var(--rs); padding: 3px; background: var(--surface); }
+.seg button { font: 500 13px var(--f-body); color: var(--muted); background: transparent; border: 0; border-radius: 7px; padding: 4px 12px; cursor: pointer; }
+html[lang="fa"] .seg button[data-l="fa"], html[lang="en"] .seg button[data-l="en"] { background: var(--accent); color: var(--on-accent); }
+.icon-btn { width: 38px; height: 38px; display: grid; place-items: center; border-radius: var(--rs); border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+.icon-btn.wide { width: auto; padding-inline: 12px; gap: 8px; display: inline-flex; align-items: center; font: 500 13px var(--f-body); color: var(--muted); }
+.kbd { font-family: var(--f-mono); font-size: 11px; border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; color: var(--muted); }
+
+/* ---- hero ---- */
+.hero { padding-block: 80px 8px; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 72px; align-items: start; }
+.kicker { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; color: var(--muted); margin: 0 0 22px; }
+.kicker::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
+h1 { font-family: var(--f-display); font-weight: 500; font-size: clamp(3rem, 7.4vw, 5.6rem); line-height: 1.02; letter-spacing: -.03em; margin: 0 0 24px; text-wrap: balance; }
+html[lang="fa"] h1 { font-weight: 800; letter-spacing: 0; line-height: 1.3; font-size: clamp(2.8rem, 7vw, 4.8rem); }
+.pos { font-family: var(--f-display); font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.4; margin: 0 0 18px; max-width: 24em; }
+html[lang="fa"] .pos { font-weight: 500; line-height: 1.7; }
+.lead { font-size: 18px; max-width: 34em; color: var(--muted); margin: 0 0 32px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; font: 600 15px var(--f-body); text-decoration: none; border-radius: var(--rs); padding: 12px 24px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; transition: border-color .2s, background .2s, color .2s; }
+.btn.primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.btn.primary:hover { background: color-mix(in srgb, var(--accent) 86%, var(--ink)); }
+.btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
+.btn.sm { padding: 10px 18px; font-size: 14px; }
+
+.ledger { margin: 0; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); overflow: hidden; }
+.ledger > div { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 16px; padding: 16px 20px; border-top: 1px solid var(--line); }
+.ledger > div:first-child { border-top: 0; }
+.ledger dt { color: var(--muted); font-size: 14px; padding-top: 1px; }
+.ledger dd { margin: 0; font-size: 15.5px; line-height: 1.6; }
+.ledger a { text-decoration: none; border-bottom: 1px solid var(--line); transition: color .2s, border-color .2s; }
+.ledger a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ---- document layout ---- */
+.doc { display: grid; grid-template-columns: 176px minmax(0, 1fr); gap: 64px; align-items: start; }
+.toc { position: sticky; top: 96px; margin-top: 84px; display: flex; flex-direction: column; font-size: 14px; }
+.toc a { display: block; padding: 7px 14px; border-inline-start: 2px solid var(--line); color: var(--muted); text-decoration: none; transition: color .2s, border-color .2s; }
+.toc a:hover { color: var(--ink); }
+.toc a.on { color: var(--ink); border-color: var(--accent); font-weight: 600; }
+.toc .cap { color: var(--ink); font-weight: 600; padding: 0 14px 10px; }
+.content { min-width: 0; }
+.block { padding-block: 88px 0; }
+.content .block:first-child { padding-top: 72px; }
+.head { display: grid; gap: 12px; margin-bottom: 36px; max-width: 42em; }
+h2 { font-family: var(--f-display); font-weight: 500; font-size: clamp(1.9rem, 3.8vw, 2.7rem); line-height: 1.15; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+html[lang="fa"] h2 { font-weight: 800; letter-spacing: 0; line-height: 1.45; }
+.head p { margin: 0; color: var(--muted); font-size: 17px; }
+
+/* research cards */
+.rgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.rcard { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+.rcard h3 { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: 24px; line-height: 1.25; letter-spacing: -.01em; }
+html[lang="fa"] .rcard h3 { font-weight: 700; font-size: 21px; line-height: 1.6; letter-spacing: 0; }
+.rcard p { margin: 0; font-family: var(--f-display); font-size: 18.5px; line-height: 1.7; color: color-mix(in srgb, var(--ink) 84%, var(--muted)); }
+html[lang="fa"] .rcard p { font-size: 16.5px; line-height: 2; }
+
+/* skills */
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.sk { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); padding: 22px 24px; display: flex; flex-direction: column; gap: 14px; }
+.sk h3 { margin: 0; font-weight: 600; font-size: 17px; line-height: 1.4; }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; list-style: none; }
+.pills li { font-size: 13.5px; line-height: 1.4; color: var(--ink); background: var(--bg2); border: 1px solid var(--line); border-radius: 6px; padding: 3px 10px; }
+
+/* universities */
+.unis { border-bottom: 1px solid var(--line); }
+.uni { display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; gap: 6px 28px; align-items: baseline; padding: 22px 0; border-top: 1px solid var(--line); }
+.uni .tg { color: var(--muted); font-size: 14px; }
+.uni h3 { margin: 0; font-family: var(--f-display); font-weight: 500; font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: 1.25; letter-spacing: -.015em; }
+html[lang="fa"] .uni h3 { font-weight: 700; letter-spacing: 0; font-size: clamp(1.4rem, 2.8vw, 1.9rem); }
+.uni .sub { color: var(--muted); text-align: end; }
+.uni.home h3 { color: var(--accent); }
+
+/* projects */
+.paper { padding-block: 48px 8px; border-top: 1px solid var(--line); }
+.paper:first-of-type { border-top: 0; padding-top: 0; }
+.paper .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 16px; font-size: 13.5px; }
+.paper .meta b { color: var(--accent); font-weight: 600; margin-inline-end: 6px; font-size: 14.5px; }
+.paper .meta span { border: 1px solid var(--line); border-radius: 6px; padding: 1px 10px; color: var(--muted); }
+.paper h3 { margin: 0 0 22px; font-family: var(--f-display); font-weight: 500; font-size: clamp(1.8rem, 3.6vw, 2.5rem); line-height: 1.15; letter-spacing: -.02em; }
+html[lang="fa"] .paper h3 { font-weight: 800; letter-spacing: 0; line-height: 1.5; }
+.abs { font-family: var(--f-display); font-size: 20px; line-height: 1.75; max-width: 40em; margin: 0 0 28px; color: color-mix(in srgb, var(--ink) 90%, var(--muted)); }
+html[lang="fa"] .abs { font-size: 17.5px; line-height: 2.05; }
+.abs b { display: inline-block; font-family: var(--f-body); font-size: 14px; font-weight: 600; color: var(--accent); margin-inline-end: 10px; }
+.spec { display: grid; grid-template-columns: 130px minmax(0, 1fr); margin: 0 0 30px; border-top: 1px solid var(--line); }
+.spec dt, .spec dd { padding: 14px 0; border-bottom: 1px solid var(--line); margin: 0; }
+.spec dt { font-size: 14px; font-weight: 600; color: var(--accent); padding-top: 16px; }
+.spec dd { font-family: var(--f-display); font-size: 18px; line-height: 1.65; padding-inline-start: 12px; }
+html[lang="fa"] .spec dd { font-size: 16.5px; line-height: 1.95; }
+.fig { margin: 0 0 30px; }
+.fig .viz { position: relative; height: 320px; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: var(--bg2); }
+.fig canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.fig figcaption { font-size: 14px; color: var(--muted); padding-top: 12px; line-height: 1.6; }
+.fig figcaption b { color: var(--ink); font-weight: 600; }
+
+/* lab */
+.lab { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.lab-card { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); padding: 28px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.lab-card h3 { margin: 0; font-weight: 600; font-size: 18px; line-height: 1.4; }
+.lab-wide { grid-column: 1 / -1; }
+.codes { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; direction: ltr; }
+.codes figure { margin: 0; }
+.codes figcaption { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+html[lang="fa"] .codes figcaption { direction: rtl; }
+.bits { display: grid; grid-template-columns: repeat(16, 1fr); gap: 3px; }
+.bits i { aspect-ratio: 1; border-radius: 3px; background: var(--bg2); border: 1px solid var(--line); transition: background .25s, border-color .25s; }
+.bits i.on { background: var(--accent); border-color: var(--accent); }
+.bits.b i.diff { background: var(--accent2); border-color: var(--accent2); }
+.bits.b i.diff:not(.on) { background: transparent; border-color: var(--accent2); }
+.row { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { font: 600 13.5px var(--f-body); border: 1px solid var(--line); background: var(--bg2); color: var(--ink); border-radius: var(--rs); padding: 8px 16px; cursor: pointer; transition: border-color .2s, background .2s, color .2s; }
+.pill:hover { border-color: var(--accent); }
+.pill[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.readout { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.readout div { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; background: var(--bg2); min-width: 0; }
+.readout small { display: block; font-size: 13px; color: var(--muted); }
+.readout b { display: block; font-weight: 700; font-size: 24px; line-height: 1.3; direction: ltr; text-align: start; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.readout b.ok { color: #4fd1a0; } .readout b.no { color: var(--accent2); }
+:root[data-theme="light"] .readout b.ok { color: #0a8f62; }
+@media (prefers-color-scheme: light) { :root:not([data-theme]) .readout b.ok { color: #0a8f62; } }
+.dist-wrap { position: relative; height: 230px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg2); overflow: hidden; }
+.dist-wrap canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.slider { display: grid; gap: 8px; font-size: 14px; color: var(--muted); }
+.slider .top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.slider .top b { font-family: var(--f-mono); color: var(--ink); font-weight: 500; direction: ltr; }
+input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 28px; background: transparent; cursor: pointer; direction: ltr; }
+input[type=range]::-webkit-slider-runnable-track { height: 4px; border-radius: 4px; background: var(--line); }
+input[type=range]::-moz-range-track { height: 4px; border-radius: 4px; background: var(--line); }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); border: 4px solid var(--surface); box-shadow: 0 0 0 1px var(--accent); margin-top: -9px; }
+input[type=range]::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 4px solid var(--surface); box-shadow: 0 0 0 1px var(--accent); }
+.fine { font-size: 14px; color: var(--muted); margin: 16px 0 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13.5px; color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-inline-end: 6px; }
+.kgrid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.kplot { position: relative; height: 300px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg2); overflow: hidden; }
+.kplot canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.kctl { display: grid; gap: 14px; min-width: 0; }
+
+/* honors */
+.bento { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.hc { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); padding: 24px; display: flex; flex-direction: column; gap: 4px; }
+.hc .y { font-size: 14px; color: var(--muted); }
+.hc .r { font-family: var(--f-display); font-weight: 600; font-size: 26px; line-height: 1.25; color: var(--accent); margin-top: 18px; }
+html[lang="fa"] .hc .r { font-weight: 800; font-size: 22px; }
+.hc .t { font-size: 16px; line-height: 1.5; }
+
+/* notes */
+.note { padding-block: 40px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 8px 28px; }
+.note:first-of-type { border-top: 0; padding-top: 0; }
+.note .m { font-size: 14px; color: var(--muted); padding-top: 10px; }
+.note h3 { margin: 0 0 14px; font-family: var(--f-display); font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.2; letter-spacing: -.015em; }
+html[lang="fa"] .note h3 { font-weight: 700; letter-spacing: 0; line-height: 1.5; }
+.note p { margin: 0; font-family: var(--f-display); font-size: 19.5px; line-height: 1.8; max-width: 38em; color: color-mix(in srgb, var(--ink) 88%, var(--muted)); }
+html[lang="fa"] .note p { font-size: 17px; line-height: 2.1; }
+
+/* reading list */
+.refs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.refs li { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 6px 18px; padding: 18px 8px; border-bottom: 1px solid var(--line); align-items: baseline; transition: background .3s; }
+.refs li:target { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.refs .n { font-family: var(--f-mono); font-size: 13px; color: var(--accent); }
+.refs .c { font-family: var(--f-display); font-size: 18px; line-height: 1.5; direction: ltr; text-align: start; }
+html[dir="rtl"] .refs .c { text-align: left; }
+.refs .c i { color: var(--muted); }
+.refs .c b { font-weight: 600; }
+.refs .t { font-size: 13px; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 1px 10px; white-space: nowrap; }
+
+/* contact */
+.contact { border: 1px solid var(--line); border-radius: var(--r); padding: 48px; background: var(--surface); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.contact h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
+.contact p { margin: 14px 0 20px; color: var(--muted); font-size: 18px; }
+.cta2 { display: flex; flex-wrap: wrap; gap: 10px; }
+.chans { display: grid; gap: 12px; min-width: 0; }
+.chan { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; }
+.chan .lab { font-size: 14px; color: var(--muted); }
+.chan .val { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: clamp(1.1rem, 2.6vw, 1.5rem); direction: ltr; unicode-bidi: isolate; text-align: start; overflow-wrap: anywhere; user-select: all; }
+.copy { font: 600 14px var(--f-body); background: transparent; color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 8px 18px; cursor: pointer; transition: border-color .2s, color .2s; }
+.copy:hover { border-color: var(--accent); color: var(--accent); }
+
+footer { margin-top: 96px; border-top: 1px solid var(--line); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-block: 28px 40px; color: var(--muted); font-size: 14px; }
+
+.totop { position: fixed; inset-inline-end: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 60; width: 42px; height: 42px; border-radius: var(--rs); border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; display: grid; place-items: center; opacity: 0; transform: translateY(8px); pointer-events: none; transition: opacity .2s, transform .2s, border-color .2s; }
+.totop.show { opacity: 1; transform: none; pointer-events: auto; }
+.totop:hover { border-color: var(--accent); color: var(--accent); }
+
+/* command palette */
+.cmd { position: fixed; inset: 0; z-index: 500; display: none; align-items: flex-start; justify-content: center; padding: 14vh 16px 16px; background: color-mix(in srgb, var(--bg) 72%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.cmd.open { display: flex; }
+.cmd-box { width: min(560px, 100%); border: 1px solid var(--line); background: var(--surface); border-radius: var(--r); box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .55); overflow: hidden; }
+.cmd-box input { width: 100%; background: transparent; border: 0; border-bottom: 1px solid var(--line); color: var(--ink); font: 500 17px var(--f-body); padding: 18px 22px; outline: none; }
+.cmd-box ul { list-style: none; margin: 0; padding: 8px; max-height: 50vh; overflow: auto; }
+.cmd-box li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 14px; border-radius: 8px; cursor: pointer; font-size: 15.5px; }
+.cmd-box li small { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.cmd-box li[aria-selected="true"] { background: var(--accent); color: var(--on-accent); }
+.cmd-box li[aria-selected="true"] small { color: var(--on-accent); opacity: .8; }
+.cmd-box .empty { padding: 18px; color: var(--muted); text-align: center; }
+
+/* ---- responsive ---- */
+@media (max-width: 1000px) {
+  .doc { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .toc { display: none; }
+  .content .block { padding-block: 72px 0; }
+  .content .block:first-child { padding-top: 56px; }
+  .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lab { grid-template-columns: minmax(0, 1fr); }
+  .kgrid { grid-template-columns: minmax(0, 1fr); }
+  .hero .wrap { grid-template-columns: minmax(0, 1fr); gap: 48px; }
+}
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  .links { display: none; }
+  .icon-btn.wide .kbd, .icon-btn.wide .lbl { display: none; }
+  .icon-btn.wide { width: 38px; padding: 0; justify-content: center; }
+  .hero { padding-block: 48px 0; }
+  .ledger > div { grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 14px 18px; }
+  .rgrid, .skills { grid-template-columns: minmax(0, 1fr); }
+  .rcard { padding: 22px; }
+  .uni { grid-template-columns: minmax(0, 1fr); padding: 18px 0; }
+  .uni .sub { text-align: start; }
+  .spec { grid-template-columns: minmax(0, 1fr); }
+  .spec dt { border-bottom: 0; padding-bottom: 0; }
+  .spec dd { padding-inline-start: 0; padding-top: 4px; }
+  .fig .viz { height: 260px; }
+  .abs { font-size: 18.5px; }
+  .lab-card { padding: 20px; }
+  .readout b { font-size: 20px; }
+  .kplot { height: 240px; }
+  .bento { grid-template-columns: minmax(0, 1fr); }
+  .note { grid-template-columns: minmax(0, 1fr); }
+  .note .m { padding-top: 0; }
+  .refs li { grid-template-columns: 36px minmax(0, 1fr); }
+  .refs .t { grid-column: 2; justify-self: start; }
+  .contact { grid-template-columns: minmax(0, 1fr); padding: 28px 22px; }
+}
+
+/* ---- v6 refinements ---- */
+.sk.wide { grid-column: 1 / -1; }
+.paper.brief h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 12px; }
+.paper.brief .abs { margin: 0; }
+::selection { background: color-mix(in srgb, var(--accent) 35%, transparent); }
+html { scrollbar-color: var(--line) transparent; }
+p { text-wrap: pretty; }
+.hero { position: relative; isolation: isolate; }
+.hero::before { content: ""; position: absolute; inset: 0 0 -40px; z-index: -1; pointer-events: none; opacity: .55;
+  background-image: radial-gradient(var(--line) 1px, transparent 1.2px); background-size: 28px 28px;
+  -webkit-mask-image: linear-gradient(180deg, #000 10%, transparent 90%); mask-image: linear-gradient(180deg, #000 10%, transparent 90%); }
+.subnav { display: none; position: sticky; top: calc(65px + env(safe-area-inset-top, 0px)); z-index: 40; overflow-x: auto; scrollbar-width: none; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.subnav::-webkit-scrollbar { display: none; }
+.subnav .wrap { display: flex; gap: 6px; padding-block: 8px; width: max-content; min-width: 100%; }
+.subnav a { white-space: nowrap; font-size: 14px; color: var(--muted); text-decoration: none; padding: 6px 14px; border-radius: 8px; border: 1px solid transparent; }
+.subnav a.on { color: var(--ink); background: var(--surface); border-color: var(--line); font-weight: 600; }
+.steps { counter-reset: st; list-style: none; margin: 0 0 30px; padding: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 10px; }
+.steps li { counter-increment: st; position: relative; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 12px 14px; font-size: 14px; line-height: 1.45; }
+.steps li::before { content: counter(st); display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; margin-bottom: 8px; font: 600 12px var(--f-mono); color: var(--on-accent); background: var(--accent); }
+.steps li:not(:last-child)::after { content: ""; position: absolute; top: 23px; inset-inline-end: -11px; width: 12px; height: 1px; background: var(--accent); }
+@media (max-width: 1000px) {
+  section[id] { scroll-margin-top: 130px; }
+  .subnav { display: block; }
+}
+@media (max-width: 760px) {
+  .steps { grid-auto-flow: row; grid-auto-columns: auto; }
+  .steps li { display: flex; align-items: center; gap: 12px; }
+  .steps li::before { margin: 0; flex: none; }
+  .steps li::after { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+@media (forced-colors: active) { .btn.primary, .pill[aria-pressed="true"] { border: 2px solid ButtonText; } }
+
+/* ---- v7: identity layer ---- */
+.hero { padding-block: 88px 132px; }
+h1 { font-size: clamp(3.4rem, 8.4vw, 6.8rem); line-height: 1; }
+html[lang="fa"] h1 { font-size: clamp(3.2rem, 8vw, 5.8rem); }
+.sig { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 300px; z-index: -1; pointer-events: none; -webkit-mask-image: linear-gradient(180deg, transparent, #000 45%); mask-image: linear-gradient(180deg, transparent, #000 45%); }
+.ledger { background: color-mix(in srgb, var(--surface) 80%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.facts { position: relative; z-index: 1; margin-top: -60px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); overflow: hidden; box-shadow: 0 24px 60px -32px rgba(0, 0, 0, .55); }
+.facts > div { padding: 24px 28px; border-inline-start: 1px solid var(--line); }
+.facts > div:first-child { border-inline-start: 0; }
+.facts b { display: block; font-family: var(--f-display); font-weight: 500; font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1.1; color: var(--accent); }
+html[lang="fa"] .facts b { font-weight: 800; }
+.facts span { color: var(--muted); font-size: 14.5px; }
+.rcard, .sk, .lab-card { background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 6%, var(--surface)), var(--surface) 55%); }
+.head h2::before { content: ""; display: block; width: 36px; height: 3px; border-radius: 3px; background: var(--accent); margin-bottom: 18px; }
+.bento { position: relative; padding-top: 30px; }
+.bento::before { content: ""; position: absolute; inset-inline: 0; top: 6px; height: 1px; background: var(--line); }
+.hc { position: relative; background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 7%, var(--surface)), var(--surface) 70%); }
+.hc::before { content: ""; position: absolute; top: -30px; inset-inline-start: 24px; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--bg); }
+footer { background: var(--bg2); }
+footer .wrap.foot { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 32px; padding-block: 44px 24px; font-size: 15px; }
+.foot strong { font-family: var(--f-display); font-weight: 600; font-size: 22px; color: var(--ink); }
+.foot p { margin: 8px 0 0; max-width: 28em; }
+.fn, .fc { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.fn a, .fc a { text-decoration: none; color: var(--ink); } .fn a:hover, .fc a:hover { color: var(--accent); }
+footer .wrap.legal { padding-block: 16px 36px; border-top: 1px solid var(--line); font-size: 13.5px; }
+.legal a { text-decoration: none; } .legal a:hover { color: var(--accent); }
+@media (prefers-reduced-motion: no-preference) {
+  .hero .kicker, .hero h1, .hero .pos, .hero .lead, .hero .cta, .hero .ledger { animation: rise .9s cubic-bezier(.2, .8, .2, 1) both; }
+  .hero h1 { animation-delay: .08s; } .hero .ledger { animation-delay: .2s; } .hero .pos { animation-delay: .16s; } .hero .lead { animation-delay: .24s; } .hero .cta { animation-delay: .32s; }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+@media (max-width: 760px) {
+  .hero { padding-block: 48px 110px; }
+  .sig { height: 220px; }
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: -50px; }
+  .facts > div { padding: 18px 20px; }
+  .facts > div:nth-child(3) { border-inline-start: 0; }
+  .facts > div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  footer .wrap.foot { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}
+@media print { .sig { display: none !important; } .facts { margin-top: 0; box-shadow: none; } footer { background: none; } }
+@page { size: A4; margin: 16mm 14mm; }
+@media print {
+  :root, :root[data-theme="light"], :root[data-theme="dark"], :root:not([data-theme]) { --bg: #fff; --bg2: #f4f4f8; --surface: #fff; --surface2: #f4f4f8; --ink: #111; --muted: #444; --line: #cfcfd8; --accent: #2a3cc7; --accent2: #a32748; color-scheme: light; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .nav, .subnav, .progress, .totop, .cmd, .toc, .skip, .hero::before, .hero .cta, #lab, .viz, .fig, .cta2, .copy { display: none !important; }
+  body { font-size: 11pt; line-height: 1.55; background: #fff; }
+  .wrap { max-width: none; padding-inline: 0; }
+  .hero { padding-block: 0 8mm; }
+  .hero .wrap { grid-template-columns: 1.3fr 1fr; gap: 8mm; }
+  h1 { font-size: 34pt; }
+  .doc { grid-template-columns: 1fr; gap: 0; }
+  .block, .content .block, .content .block:first-child { padding-top: 9mm !important; }
+  h2 { font-size: 18pt; }
+  .head { margin-bottom: 5mm; }
+  .paper, .note, .rcard, .sk, .hc, .refs li, .uni { break-inside: avoid; }
+  .rcard, .sk, .hc, .ledger, .contact, .chan { box-shadow: none; }
+  .rgrid { gap: 4mm; } .rcard { padding: 5mm; }
+  .abs, .note p, .rcard p, .spec dd { font-size: 10.5pt; line-height: 1.55; }
+  .contact { padding: 6mm; }
+  a { text-decoration: none; }
+}
+
+.rcm{margin:20px 0 0;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);overflow:hidden}
+.rcm svg{display:block;width:100%;height:auto}.rcm figcaption{padding:10px 16px;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:40px}
+.q{margin:0;padding:22px;border:1px solid var(--line);border-inline-start:3px solid var(--accent);border-radius:var(--r);background:var(--surface)}
+.q p{margin:0 0 12px;font-family:var(--f-display);font-size:1.2rem;line-height:1.55}.q footer{font:500 13px var(--f-mono);color:var(--muted)}
+.tspec{margin-top:20px}.tspec>div{grid-template-columns:150px minmax(0,1fr)}.tspec dt{font-weight:600;color:var(--accent);padding:0}.tspec dd{font-family:var(--f-body);font-size:15px;line-height:1.75;padding:0;border:0}@media(max-width:600px){.tspec>div{grid-template-columns:1fr;gap:4px}}
+.rbc{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px 20px;padding:14px 16px;border-top:1px solid var(--line);font-size:14px}.rbc label{display:grid;gap:4px;color:var(--muted)}.rbc input{width:100%;accent-color:var(--accent)}.rbc output{grid-column:1/-1;font:500 13px var(--f-mono);color:var(--ink)}
+.az{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}.azc{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:18px;display:grid;gap:12px;align-content:start;min-width:0}.azc canvas{width:100%;height:auto;border-radius:8px;background:var(--bg)}.azc input[type=file]{width:100%;font-size:14px;color:var(--muted)}.fl{display:grid;gap:4px;font-size:14px;color:var(--muted)}.ir{display:grid;grid-template-columns:1fr 1fr;gap:8px}.strip{image-rendering:pixelated}
+.met{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px}.met div{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:500 12px var(--f-mono);color:var(--muted)}.met b{display:block;font-size:17px;color:var(--ink)}.met .w b{color:var(--accent2)}
+</style>
+
+<script>
+(function () {
+  var d = document.documentElement, l = null, th = null;
+  try {
+    var s = localStorage.getItem('rh-lang'); if (s === 'en' || s === 'fa') l = s;
+    var t = localStorage.getItem('rh-theme'); if (t === 'dark' || t === 'light') th = t;
+  } catch (e) {}
+  if (!l) l = /^fa/i.test(navigator.language || '') ? 'fa' : 'en';
+  d.lang = l; d.dir = l === 'fa' ? 'rtl' : 'ltr';
+  d.setAttribute('data-theme', th || 'dark');
+})();
+</script>
+</head>
+<body>
+
+<a class="skip" href="#research"><span class="fa">رفتن به محتوا</span><span class="en">Skip to content</span></a>
+<div class="progress" aria-hidden="true"><i id="prog"></i></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><i>RH</i><span><span class="fa">رویا حامدی</span><span class="en">Roya Hamedi</span></span></a>
+    <nav class="links" aria-label="Sections"><a href="#about"><span class="fa">آشنایی</span><span class="en">About</span></a><a href="#honors"><span class="fa">افتخارات</span><span class="en">Honors</span></a><a href="#projects"><span class="fa">پروژه‌ها</span><span class="en">Projects</span></a><a href="#analyze"><span class="fa">تحلیل صدا و عکس</span><span class="en">Analyze</span></a><a href="#bio"><span class="fa">بیوانفورماتیک</span><span class="en">Bioinformatics</span></a><a href="#reading"><span class="fa">مقاله‌ها</span><span class="en">Papers</span></a><a href="#contact"><span class="fa">تماس</span><span class="en">Contact</span></a></nav>
+    <div class="tools">
+      <button class="icon-btn wide" id="cmdBtn" type="button" aria-label="Open menu and commands" aria-haspopup="dialog">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>
+        <span class="lbl"><span class="fa">منو</span><span class="en">Menu</span></span><span class="kbd">Ctrl K</span>
+      </button>
+      <div class="seg" role="group" aria-label="Language"><button type="button" data-l="fa">فارسی</button><button type="button" data-l="en">EN</button></div>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.3M12 19.2v2.3M2.5 12h2.3M19.2 12h2.3M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="subnav" aria-label="Sections"><div class="wrap"><a href="#about"><span class="fa">آشنایی</span><span class="en">About</span></a><a href="#honors"><span class="fa">افتخارات</span><span class="en">Honors</span></a><a href="#universities"><span class="fa">دانشگاه‌ها</span><span class="en">Universities</span></a><a href="#skills"><span class="fa">مهارت‌ها</span><span class="en">Skills</span></a><a href="#projects"><span class="fa">پروژه‌ها</span><span class="en">Projects</span></a><a href="#analyze"><span class="fa">تحلیل صدا و عکس</span><span class="en">Analyze</span></a><a href="#lab"><span class="fa">آزمایشگاه</span><span class="en">Lab</span></a><a href="#research"><span class="fa">پژوهش</span><span class="en">Research</span></a><a href="#bio"><span class="fa">بیوانفورماتیک</span><span class="en">Bioinformatics</span></a><a href="#notes"><span class="fa">یادداشت‌ها</span><span class="en">Notes</span></a><a href="#reading"><span class="fa">مقاله‌ها</span><span class="en">Papers</span></a><a href="#contact"><span class="fa">تماس</span><span class="en">Contact</span></a></div></nav>
+
+<main id="top">
+  <section class="hero">
+    <canvas class="sig" id="sig" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div>
+        <p class="kicker"><span class="fa">مهندسی هوش مصنوعی و داده</span><span class="en">AI &amp; data engineer</span></p>
+        <h1><span class="fa">رویا حامدی</span><span class="en">Roya Hamedi</span></h1>
+        <p class="pos"><span class="fa">یادگیری ماشین برای سیگنال، تصویر و زبان.</span><span class="en">Machine learning for signals, images and language.</span></p>
+        <p class="lead"><span class="fa">دانشجوی مهندسی کامپیوتر دانشگاه زنجان؛ کار روی یادگیری ماشین برای بیومارکر صوتی، تشخیص عنبیه و مهندسی داده. به‌دنبال فرصت‌های پژوهشی و تحصیلات تکمیلی.</span><span class="en">Computer engineering student at the University of Zanjan, working on machine learning for voice biomarkers, iris recognition and data engineering. Looking for research and graduate-study opportunities.</span></p>
+        <div class="cta">
+          <a class="btn primary" href="#projects"><span class="fa">دیدن پروژه‌ها</span><span class="en">View projects</span></a>
+          <a class="btn ghost" href="#contact"><span class="fa">تماس</span><span class="en">Contact</span></a>
+          <a class="btn ghost" href="assets/Roya_Hamedi_Resume_FA.pdf" download><span class="fa">دانلود رزومه (PDF)</span><span class="en">Résumé (PDF, Persian)</span></a>
+        </div>
+      </div>
+      <dl class="ledger">
+        <div><dt><span class="fa">تحصیل</span><span class="en">Studies</span></dt><dd><a href="#universities"><span class="fa">کارشناسی مهندسی کامپیوتر، دانشگاه زنجان</span><span class="en">BSc computer engineering, University of Zanjan</span></a></dd></div>
+        <div><dt><span class="fa">حوزه کاری</span><span class="en">Focus</span></dt><dd><a href="#research"><span class="fa">هوش مصنوعی، علم داده، بینایی ماشین، رباتیک جراحی، بیوانفورماتیک، پردازش صوت و سیگنال، سلامت دیجیتال</span><span class="en">AI, data science, computer vision, surgical robotics, bioinformatics, audio and signal processing, digital health</span></a></dd></div>
+        <div><dt><span class="fa">دوره‌ها</span><span class="en">Programs</span></dt><dd><span class="fa">هاروارد (برنامه‌نویسی و علم داده)، مونیخ (رباتیک)، ژاپن (گواهی TTC)</span><span class="en">Harvard (programming and data science), Munich (robotics), Japan (TTC certificate)</span></dd></div>
+        <div><dt><span class="fa">افتخارات</span><span class="en">Honors</span></dt><dd><a href="#honors"><span class="fa">رتبه چهارم المپیاد فناوری ۲۰۲۵؛ رتبه اول مسابقات نخبگان ایران ۱۴۰۵</span><span class="en">4th place, Technology Olympiad 2025; 1st place, Iran Elites competitions 2026–27</span></a></dd></div>
+        <div><dt><span class="fa">زبان‌ها</span><span class="en">Languages</span></dt><dd><span class="fa">فارسی، انگلیسی و ترکی (پیشرفته)؛ آلمانی (متوسط)</span><span class="en">Persian, English and Turkish (advanced); German (intermediate)</span></dd></div>
+        <div><dt><span class="fa">مکان</span><span class="en">Location</span></dt><dd><span class="fa">تبریز، ایران</span><span class="en">Tabriz, Iran</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="facts"><div><b><span class="fa">۳</span><span class="en">3</span></b><span><span class="fa">افتخار و رتبه</span><span class="en">Honors and placements</span></span></div><div><b><span class="fa">۳</span><span class="en">3</span></b><span><span class="fa">پروژه‌ی منتخب</span><span class="en">Selected projects</span></span></div><div><b><span class="fa">۳</span><span class="en">3</span></b><span><span class="fa">دوره‌ی بین‌المللی</span><span class="en">International programs</span></span></div><div><b><span class="fa">۴</span><span class="en">4</span></b><span><span class="fa">زبان</span><span class="en">Languages</span></span></div></div></div>
+
+  <div class="wrap">
+  <div class="doc">
+    <nav class="toc" aria-label="Contents">
+      <div class="cap"><span class="fa">فهرست</span><span class="en">Contents</span></div>
+      <a href="#about"><span class="fa">آشنایی</span><span class="en">About</span></a>
+      <a href="#honors"><span class="fa">افتخارات</span><span class="en">Honors</span></a>
+      <a href="#universities"><span class="fa">دانشگاه‌ها</span><span class="en">Universities</span></a>
+      <a href="#skills"><span class="fa">مهارت‌ها</span><span class="en">Skills</span></a>
+      <a href="#projects"><span class="fa">پروژه‌ها</span><span class="en">Projects</span></a>
+      <a href="#analyze"><span class="fa">تحلیل صدا و عکس</span><span class="en">Analyze</span></a>
+      <a href="#lab"><span class="fa">آزمایشگاه</span><span class="en">Lab</span></a>
+      <a href="#research"><span class="fa">پژوهش</span><span class="en">Research</span></a>
+      <a href="#bio"><span class="fa">بیوانفورماتیک</span><span class="en">Bioinformatics</span></a>
+      <a href="#notes"><span class="fa">یادداشت‌ها</span><span class="en">Notes</span></a>
+      <a href="#reading"><span class="fa">مقاله‌ها</span><span class="en">Papers</span></a>
+      <a href="#contact"><span class="fa">تماس</span><span class="en">Contact</span></a>
+    </nav>
+    <div class="content">
+
+  <section class="block" id="about">
+    <div class="head"><h2><span class="fa">آشنایی</span><span class="en">About me</span></h2></div>
+    <p class="lead" style="max-width:46em"><span class="fa">من رویا حامدی هستم، دانشجوی مهندسی کامپیوتر دانشگاه زنجان. کارم در مرز هوش مصنوعی و سلامت است: از بیومارکر صوتی و تحلیل عنبیه تا بیوانفورماتیک و ربات جراحی. باور دارم مدل پزشکی پیش از آنکه دقیق باشد باید قابل‌اعتماد، کالیبره و صادقانه ارزیابی شده باشد. به‌دنبال فرصت پژوهشی و تحصیلات تکمیلی در هوش مصنوعی زیستی‌پزشکی هستم.</span><span class="en">I am Roya Hamedi, a computer engineering student at the University of Zanjan. My work sits where AI meets health: from voice biomarkers and iris analysis to bioinformatics and a surgical robot. I believe a medical model must be trustworthy, calibrated and honestly evaluated before it is accurate. I am looking for research and graduate opportunities in biomedical AI.</span></p>
+    <div class="rgrid">
+      <article class="rcard"><h3><span class="fa">داده درست</span><span class="en">Sound data</span></h3><p><span class="fa">تقسیم بر اساس فرد، کنترل نشت و نسخه‌بندی؛ پایه هر نتیجه معتبر.</span><span class="en">Subject-wise splits, leakage control, versioning: the base of every valid result.</span></p></article>
+      <article class="rcard"><h3><span class="fa">ارزیابی صادقانه</span><span class="en">Honest evaluation</span></h3><p><span class="fa">کالیبراسیون، ROC و عوامل مخدوش‌کننده، نه فقط یک عدد دقت.</span><span class="en">Calibration, ROC and confounders, not a single accuracy number.</span></p></article>
+      <article class="rcard"><h3><span class="fa">ایمنی و مسئولیت</span><span class="en">Safety and care</span></h3><p><span class="fa">از غربالگری تا اتاق عمل، خطا هزینه انسانی دارد.</span><span class="en">From screening to the operating room, errors have human cost.</span></p></article>
+    </div>
+  </section>
+
+  <section class="block" id="honors">
+    <div class="head"><h2><span class="fa">رتبه‌ها و افتخارها</span><span class="en">Placements and distinctions</span></h2></div>
+    <div class="bento">
+      <article class="hc"><span class="y"><span class="fa">۲۰۲۵</span><span class="en">2025</span></span><span class="r"><span class="fa">رتبه چهارم</span><span class="en">4th place</span></span><span class="t"><span class="fa">المپیاد فناوری</span><span class="en">Technology Olympiad</span></span></article>
+      <article class="hc"><span class="y"><span class="fa">۲۰۲۶</span><span class="en">2026</span></span><span class="r"><span class="fa">برترین پروژه</span><span class="en">Best project</span></span><span class="t"><span class="fa">مسابقه چین</span><span class="en">China competition</span></span></article>
+      <article class="hc"><span class="y"><span class="fa">۱۴۰۵ (۲۰۲۶ تا ۲۰۲۷)</span><span class="en">1405 (2026–2027)</span></span><span class="r"><span class="fa">رتبه اول</span><span class="en">1st place</span></span><span class="t"><span class="fa">مسابقات نخبگان ایران</span><span class="en">Iran Elites competitions</span></span></article>
+    </div>
+  </section>
+
+  <section class="block" id="universities">
+    <div class="head"><h2><span class="fa">دانشگاه و دوره‌ها</span><span class="en">Where I study</span></h2></div>
+    <div class="unis">
+      <div class="uni home"><span class="tg"><span class="fa">دانشجو</span><span class="en">Student</span></span><h3><span class="fa">دانشگاه زنجان</span><span class="en">University of Zanjan</span></h3><span class="sub"><span class="fa">کارشناسی مهندسی کامپیوتر</span><span class="en">BSc computer engineering</span></span></div>
+      <div class="uni"><span class="tg"><span class="fa">دوره</span><span class="en">Course</span></span><h3><span class="fa">هاروارد</span><span class="en">Harvard</span></h3><span class="sub"><span class="fa">برنامه‌نویسی و علم داده</span><span class="en">Programming and data science</span></span></div>
+      <div class="uni"><span class="tg"><span class="fa">دوره</span><span class="en">Course</span></span><h3><span class="fa">مونیخ</span><span class="en">Munich</span></h3><span class="sub"><span class="fa">رباتیک</span><span class="en">Robotics</span></span></div>
+      <div class="uni"><span class="tg"><span class="fa">دوره</span><span class="en">Course</span></span><h3><span class="fa">ژاپن</span><span class="en">Japan</span></h3><span class="sub"><span class="fa">گواهی TTC</span><span class="en">TTC certificate</span></span></div>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="head"><h2><span class="fa">روش‌ها و مهارت‌ها</span><span class="en">Methods and skills</span></h2></div>
+    <div class="skills">
+      <article class="sk"><h3><span class="fa">سیگنال و صدا</span><span class="en">Signals and audio</span></h3><ul class="pills"><li>MFCC</li><li>Jitter · Shimmer</li><li><span class="fa">ویژگی‌های طیفی</span><span class="en">Spectral features</span></li><li><span class="fa">بازنمایی‌های خودنظارتی گفتار</span><span class="en">Self-supervised speech embeddings</span></li></ul></article>
+      <article class="sk"><h3><span class="fa">بینایی و بیومتریک</span><span class="en">Vision and biometrics</span></h3><ul class="pills"><li><span class="fa">قطعه‌بندی</span><span class="en">Segmentation</span></li><li>Rubber-sheet</li><li>Gabor / wavelet</li><li><span class="fa">فاصله همینگ</span><span class="en">Hamming matching</span></li></ul></article>
+      <article class="sk"><h3><span class="fa">ارزیابی صادقانه</span><span class="en">Honest evaluation</span></h3><ul class="pills"><li><span class="fa">تقسیم بر اساس فرد</span><span class="en">Subject-wise splits</span></li><li>ROC · AUC · EER</li><li><span class="fa">کالیبراسیون</span><span class="en">Calibration</span></li><li><span class="fa">کنترل نشت داده</span><span class="en">Leakage control</span></li></ul></article>
+      <article class="sk"><h3><span class="fa">مهندسی داده</span><span class="en">Data engineering</span></h3><ul class="pills"><li><span class="fa">جمع‌آوری</span><span class="en">Collection</span></li><li><span class="fa">برچسب‌گذاری</span><span class="en">Labelling</span></li><li><span class="fa">نسخه‌بندی</span><span class="en">Versioning</span></li></ul></article>
+      <article class="sk"><h3><span class="fa">رباتیک و تخمین حالت</span><span class="en">Robotics and state estimation</span></h3><ul class="pills"><li><span class="fa">فیلتر کالمن</span><span class="en">Kalman filter</span></li><li><span class="fa">ترکیب حسگرها</span><span class="en">Sensor fusion</span></li><li>SLAM</li></ul></article>
+      <article class="sk"><h3><span class="fa">زبان و سامانه‌های گفتگو</span><span class="en">Language and dialogue systems</span></h3><ul class="pills"><li><span class="fa">چت‌بات</span><span class="en">Chatbots</span></li><li>Transformers</li><li><span class="fa">ارزیابی مدل زبانی</span><span class="en">Language-model evaluation</span></li></ul></article>
+      <article class="sk wide"><h3><span class="fa">حوزه‌های مورد علاقه</span><span class="en">Areas of interest</span></h3><ul class="pills"><li><span class="fa">هوش مصنوعی</span><span class="en">Artificial intelligence</span></li><li><span class="fa">یادگیری ماشین</span><span class="en">Machine learning</span></li><li><span class="fa">علم داده</span><span class="en">Data science</span></li><li><span class="fa">بینایی ماشین</span><span class="en">Computer vision</span></li><li><span class="fa">پردازش تصویر</span><span class="en">Image processing</span></li><li><span class="fa">رباتیک</span><span class="en">Robotics</span></li><li><span class="fa">پردازش صوت و سیگنال</span><span class="en">Audio and signal processing</span></li><li><span class="fa">فناوری‌های سلامت دیجیتال</span><span class="en">Digital health technologies</span></li></ul></article>
+    </div>
+  </section>
+
+  <section class="block" id="projects">
+    <div class="head"><h2><span class="fa">پروژه‌های پژوهشی</span><span class="en">Research projects</span></h2></div>
+
+    <article class="paper">
+      <div class="meta"><b><span class="fa">پروژه ۱</span><span class="en">Project 1</span></b><span><span class="fa">بیومارکر صوتی</span><span class="en">Voice biomarkers</span></span><span><span class="fa">یادگیری ماشین صوتی</span><span class="en">Audio machine learning</span></span><span><span class="fa">غربالگری</span><span class="en">Screening</span></span></div>
+      <h3><span class="fa">تشخیص دیابت نوع ۲ با صدا</span><span class="en">Type 2 diabetes detection from voice</span></h3>
+      <p class="abs"><b><span class="fa">چکیده</span><span class="en">Abstract</span></b><span class="fa">دیابت نوع ۲ شایع است، اغلب دیر تشخیص داده می‌شود و غربالگری آن با آزمایش خون انجام می‌شود که بسیاری تا بروز علائم سراغش نمی‌روند. این پروژه بررسی می‌کند آیا یک ضبط کوتاه صدا می‌تواند سیگنالی ارزان و غیرتهاجمی برای تشخیص این بیماری باشد.</span><span class="en">Type 2 diabetes is common, often diagnosed late, and screened with blood tests that many people avoid until symptoms appear. This project investigates whether a short voice recording can serve as a low-cost, non-invasive signal for detecting the condition.</span></p>
+      <ol class="steps"><li><span class="fa">ضبط صدا</span><span class="en">Recording</span></li><li><span class="fa">پیش‌پردازش</span><span class="en">Preprocessing</span></li><li><span class="fa">استخراج ویژگی</span><span class="en">Feature extraction</span></li><li><span class="fa">طبقه‌بند</span><span class="en">Classifier</span></li><li><span class="fa">احتمال کالیبره‌شده</span><span class="en">Calibrated probability</span></li></ol>
+      <dl class="spec">
+        <dt><span class="fa">مسئله</span><span class="en">Problem</span></dt><dd><span class="fa">غربالگری زودهنگام، ارزان و بدون نمونه‌گیری.</span><span class="en">Early, inexpensive screening that needs no blood sample.</span></dd>
+        <dt><span class="fa">سیگنال</span><span class="en">Signal</span></dt><dd><span class="fa">ضبط کوتاه صدا؛ ویژگی‌هایی مثل زیر و بمی، جیتر، شیمر و ضرایب کپسترال (MFCC) یا بازنمایی‌های آموخته‌شده.</span><span class="en">Short voice recordings. Typical features include pitch, jitter, shimmer and mel-frequency cepstral coefficients (MFCCs), or learned embeddings.</span></dd>
+        <dt><span class="fa">مسیر</span><span class="en">Pipeline</span></dt><dd><span class="fa">ضبط ← پیش‌پردازش ← استخراج ویژگی ← طبقه‌بند ← احتمال کالیبره‌شده.</span><span class="en">Recording → preprocessing → feature extraction → classifier → calibrated probability.</span></dd>
+        <dt><span class="fa">ارزیابی</span><span class="en">Evaluation</span></dt><dd><span class="fa">تقسیم داده بر اساس فرد، حساسیت و ویژگی، سطح زیر منحنی (AUC) و توجه به عوامل مخدوش‌کننده مثل سن، جنسیت و دستگاه ضبط.</span><span class="en">Subject-wise data splits, sensitivity and specificity, area under the ROC curve (AUC), and attention to confounders such as age, sex and recording device.</span></dd>
+      </dl>
+      <figure class="fig"><div class="viz"><canvas id="voice" aria-label="Animated speech envelope" role="img"></canvas></div>
+        <figcaption><b><span class="fa">شکل ۱.</span><span class="en">Fig. 1.</span></b> <span class="fa">پوش زنده سیگنال گفتار؛ پنجره پررنگ بخشی است که تحلیل می‌شود.</span><span class="en">Animated speech envelope. The highlighted window marks the segment being analysed.</span></figcaption></figure>
+    <dl class="ledger tspec"><div><dt><span class="fa">برچسب مرجع</span><span class="en">Ground truth</span></dt><dd><span class="fa">ملاک ADA: HbA1c ≥ ۶٫۵٪ یا گلوکز ناشتا ≥ ۱۲۶ mg/dL؛ نه خوداظهاری.</span><span class="en">ADA criteria: HbA1c ≥ 6.5% or fasting glucose ≥ 126 mg/dL, not self-report.</span></dd></div><div><dt><span class="fa">ضبط</span><span class="en">Acquisition</span></dt><dd><span class="fa">واکه کشیده /a/ و جمله ثابت؛ ۱۶ kHz، ۱۶ بیت؛ بیش از یک دستگاه ضبط برای سنجش پایداری.</span><span class="en">Sustained vowel /a/ plus a fixed sentence; 16 kHz, 16-bit; more than one recording device to test robustness.</span></dd></div><div><dt><span class="fa">ویژگی‌ها</span><span class="en">Features</span></dt><dd><span class="fa">MFCC ۱۳ ضریبی با Δ و ΔΔ (پنجره ۲۵ms، گام ۱۰ms)، جیتر/شیمر/HNR، مجموعه eGeMAPS (۸۸ ویژگی)، و نمایش‌های wav2vec 2.0.</span><span class="en">13-coefficient MFCC with Δ and ΔΔ (25 ms window, 10 ms hop), jitter/shimmer/HNR, the eGeMAPS set (88 features) and wav2vec 2.0 embeddings.</span></dd></div><div><dt><span class="fa">مدل‌ها</span><span class="en">Models</span></dt><dd><span class="fa">رگرسیون لجستیک و SVM (RBF) به‌عنوان خط پایه؛ تقویت گرادیانی؛ سر خطی روی نمایش‌های منجمد.</span><span class="en">Logistic regression and RBF-SVM baselines; gradient boosting; a linear head on frozen embeddings.</span></dd></div><div><dt><span class="fa">اعتبارسنجی</span><span class="en">Validation</span></dt><dd><span class="fa">GroupKFold بر اساس فرد با CV تو در تو؛ تنظیم فراپارامتر فقط در حلقه درونی.</span><span class="en">Subject-grouped GroupKFold with nested CV; hyperparameters tuned only in the inner loop.</span></dd></div><div><dt><span class="fa">معیارها</span><span class="en">Metrics</span></dt><dd><span class="fa">AUROC، حساسیت در ویژگی ۹۰٪، Brier و ECE؛ فاصله اطمینان بوت‌استرپ.</span><span class="en">AUROC, sensitivity at 90% specificity, Brier score and ECE; bootstrap confidence intervals.</span></dd></div><div><dt><span class="fa">خطرها</span><span class="en">Risks</span></dt><dd><span class="fa">مخدوش‌گرها: سن، جنسیت، BMI، دارو، زبان، دستگاه. خروجی غربالگری است، نه تشخیص.</span><span class="en">Confounders: age, sex, BMI, medication, language, device. Output is screening, not diagnosis.</span></dd></div></dl><p class="abs" style="font-size:14px;color:var(--muted)"><span class="fa">مشخصات فنی روش کار است، نه نتایج گزارش‌شده.</span><span class="en">Technical specification of the approach, not reported results.</span></p></article>
+
+    <article class="paper">
+      <div class="meta"><b><span class="fa">پروژه ۲</span><span class="en">Project 2</span></b><span><span class="fa">بیومتریک</span><span class="en">Biometrics</span></span><span><span class="fa">بینایی ماشین</span><span class="en">Computer vision</span></span><span><span class="fa">قطعه‌بندی</span><span class="en">Segmentation</span></span></div>
+      <h3><span class="fa">تشخیص عنبیه چشم از روی عکس</span><span class="en">Iris recognition from photographs</span></h3>
+      <p class="abs"><b><span class="fa">چکیده</span><span class="en">Abstract</span></b><span class="fa">الگوی عنبیه پیش از تولد شکل می‌گیرد و به‌طرز قابل‌توجهی پایدار می‌ماند، پس بیومتریک قدرتمندی است. این پروژه افراد را از روی عکس‌های معمولی چشم شناسایی می‌کند، جایی که نور، فوکوس و پوشیدگی پلک بسیار کمتر از اسکنرهای اختصاصی کنترل‌شده است.</span><span class="en">The iris pattern forms before birth and stays remarkably stable, which makes it a strong biometric. This project recognizes people from ordinary eye photographs, where lighting, focus and eyelid occlusion are far less controlled than in dedicated scanners.</span></p>
+      <ol class="steps"><li><span class="fa">یافتن مردمک و مرز</span><span class="en">Locate pupil and limbus</span></li><li><span class="fa">باز کردن حلقه (رابر-شیت)</span><span class="en">Unwrap (rubber-sheet)</span></li><li><span class="fa">کدگذاری بافت</span><span class="en">Encode texture</span></li><li><span class="fa">فاصله همینگ</span><span class="en">Hamming matching</span></li></ol>
+      <dl class="spec">
+        <dt><span class="fa">مسئله</span><span class="en">Problem</span></dt><dd><span class="fa">شناسایی هویت از روی عکس چشم.</span><span class="en">Identify a person from a photograph of an eye.</span></dd>
+        <dt><span class="fa">سیگنال</span><span class="en">Signal</span></dt><dd><span class="fa">بافت عنبیه میان مردمک و صلبیه.</span><span class="en">The iris texture between the pupil and the sclera.</span></dd>
+        <dt><span class="fa">مسیر</span><span class="en">Pipeline</span></dt><dd><span class="fa">یافتن مردمک و مرز عنبیه ← باز کردن حلقه عنبیه به یک نوار مستطیلی (مدل رابر-شیت) ← کدگذاری بافت (فیلتر گابور/موجک یا ویژگی آموخته‌شده) ← مقایسه کدها با فاصله همینگ یا فاصله بردار.</span><span class="en">Locate the pupil and limbus → unwrap the annulus into a rectangular strip (rubber-sheet model) → encode texture with Gabor or wavelet phase, or learned features → compare codes by Hamming or embedding distance.</span></dd>
+        <dt><span class="fa">ارزیابی</span><span class="en">Evaluation</span></dt><dd><span class="fa">نرخ پذیرش و رد اشتباه، منحنی ROC و EER و فیلتر کیفیت تصویر.</span><span class="en">False accept and false reject rates, the ROC curve and equal error rate (EER), and image quality filtering.</span></dd>
+      </dl>
+      <figure class="fig"><div class="viz"><canvas id="iris" aria-label="Animated iris with unwrapped strip" role="img"></canvas></div>
+        <figcaption><b><span class="fa">شکل ۲.</span><span class="en">Fig. 2.</span></b> <span class="fa">عنبیه و نوار بازشده در پایین؛ کمان چرخان نشان می‌دهد کدام بخش زاویه‌ای خوانده می‌شود.</span><span class="en">Iris with the unwrapped strip below. The sweeping arc shows which angular sector is being read.</span></figcaption></figure>
+    <dl class="ledger tspec"><div><dt><span class="fa">گام ۱: قطعه‌بندی</span><span class="en">Step 1: segmentation</span></dt><dd><span class="fa">عملگر انتگرو-دیفرانسیلی یا تبدیل هاف برای مردمک و لیمبوس؛ ماسک پلک و مژه.</span><span class="en">Integro-differential operator or Hough transform for pupil and limbus; eyelid and eyelash masks.</span></dd></div><div><dt><span class="fa">گام ۲: نرمال‌سازی</span><span class="en">Step 2: normalisation</span></dt><dd><span class="fa">مدل رابر-شیت دوگمن؛ نوار قطبی ۶۴×۵۱۲ مستقل از اتساع مردمک.</span><span class="en">Daugman rubber-sheet model; a 64×512 polar strip invariant to pupil dilation.</span></dd></div><div><dt><span class="fa">گام ۳: کدگذاری</span><span class="en">Step 3: encoding</span></dt><dd><span class="fa">فیلتر گابور دوبعدی، چهار‌سطحی‌سازی فاز؛ کد ۲۰۴۸ بیتی همراه ماسک.</span><span class="en">2D Gabor filters with phase quantised to two bits; a 2048-bit code plus mask.</span></dd></div><div><dt><span class="fa">گام ۴: تطبیق</span><span class="en">Step 4: matching</span></dt><dd><span class="fa">فاصله همینگ کسری روی بیت‌های معتبر؛ کمینه روی چرخش‌های ±۸ بیت؛ آستانه حدود ۰٫۳۲.</span><span class="en">Fractional Hamming distance over valid bits; minimum across ±8-bit rotations; threshold near 0.32.</span></dd></div><div><dt><span class="fa">داده</span><span class="en">Data</span></dt><dd><span class="fa">پایگاه‌های عمومی CASIA-Iris، IITD و UBIRIS؛ بدون هم‌پوشانی فرد میان تنظیم و آزمون.</span><span class="en">Public benchmarks CASIA-Iris, IITD and UBIRIS; no subject overlap between tuning and test.</span></dd></div><div><dt><span class="fa">معیارها</span><span class="en">Metrics</span></dt><dd><span class="fa">FAR/FRR، منحنی DET، EER و d′؛ نرخ شکست در ثبت‌نام (FTE).</span><span class="en">FAR/FRR, DET curve, EER and d′; failure-to-enrol rate (FTE).</span></dd></div></dl><p class="abs" style="font-size:14px;color:var(--muted)"><span class="fa">مشخصات فنی روش کار است، نه نتایج گزارش‌شده.</span><span class="en">Technical specification of the approach, not reported results.</span></p></article>
+
+    <article class="paper brief">
+      <div class="meta"><b><span class="fa">پروژه ۳</span><span class="en">Project 3</span></b><span><span class="fa">رباتیک جراحی</span><span class="en">Surgical robotics</span></span><span><span class="fa">تله‌اپریشن</span><span class="en">Teleoperation</span></span></div>
+      <h3><span class="fa">ربات جراحی</span><span class="en">Surgical robot</span></h3>
+      <p class="abs"><span class="fa">طراحی یک ربات جراحی با کنترل از راه دور. محورهای فنی: سینماتیک مستقیم و معکوس، قید «مرکز دوردست حرکت» برای جراحی کم‌تهاجم، تبدیل مقیاس حرکت دست به نوک ابزار، فیلتر لرزش دست با تخمین حالت (مثل کالمن) و حدود ایمنی نرم‌افزاری.</span><span class="en">Design of a teleoperated surgical robot. Technical threads: forward and inverse kinematics, the remote-centre-of-motion constraint for minimally invasive surgery, motion scaling from hand to instrument tip, tremor filtering through state estimation (Kalman-style) and software safety limits.</span></p>
+      <figure class="rcm"><canvas id="rbC" width="1040" height="600" style="display:block;width:100%;height:auto;touch-action:none;cursor:crosshair" aria-label="Surgical robot simulator"></canvas><canvas id="rbP" width="1040" height="140" style="display:block;width:100%;height:auto;border-top:1px solid var(--line)"></canvas>
+<div class="rbc"><label><span class="fa">کاهش حرکت</span><span class="en">Motion scaling</span> <b id="rbSv">3:1</b><input id="rbS" type="range" min="1" max="8" value="3"></label><label><span class="fa">لرزش دست (px)</span><span class="en">Hand tremor (px)</span><input id="rbA" type="range" min="0" max="8" step=".5" value="4"></label><label><span class="fa">فرکانس برش فیلتر (Hz)</span><span class="en">Filter cutoff (Hz)</span><input id="rbFc" type="range" min="1" max="12" value="4"></label><label><span><input id="rbF" type="checkbox" checked> <span class="fa">فیلتر لرزش</span><span class="en">Tremor filter</span></span></label><label><span><input id="rbL" type="checkbox" checked> <span class="fa">محدودیت ایمنی</span><span class="en">Safety limit</span></span></label><output id="rbO"></output></div>
+<figcaption><span class="fa">شکل ۳. شبیه‌ساز: روی تصویر بکشید تا دست جراح را کنترل کنید (وگرنه خودکار حرکت می‌کند). مسیر صورتی لرزش خام و مسیر آبی نوک فیلترشده است. اعداد شبیه‌سازی‌اند.</span><span class="en">Fig. 3. Simulator: drag on the view to act as the surgeon hand (otherwise it runs on autopilot). The pink trace is raw tremor, the blue trace the filtered tip. Numbers are simulated.</span></figcaption></figure>
+    <dl class="ledger tspec"><div><dt><span class="fa">سینماتیک</span><span class="en">Kinematics</span></dt><dd><span class="fa">پارامترهای DH، سینماتیک مستقیم و ژاکوبین؛ معکوس با کمترین مربعات میرا (DLS) نزدیک تکینگی.</span><span class="en">DH parameters, forward kinematics and Jacobian; inverse via damped least squares (DLS) near singularities.</span></dd></div><div><dt><span class="fa">قید RCM</span><span class="en">RCM constraint</span></dt><dd><span class="fa">محور ابزار همیشه از نقطه ورودی ثابت می‌گذرد؛ دو درجه چرخش حول RCM به‌علاوه نفوذ و رول.</span><span class="en">The tool axis always passes through the fixed port; two rotations about the RCM plus insertion and roll.</span></dd></div><div><dt><span class="fa">تله‌اپریشن</span><span class="en">Teleoperation</span></dt><dd><span class="fa">نگاشت مقیاس‌دار حرکت دست به نوک ابزار (مثلاً ۱:۱ تا ۵:۱)، کلاچ و تنظیم مجدد.</span><span class="en">Scaled mapping from hand to tool tip (e.g. 1:1 to 5:1), with clutching and re-indexing.</span></dd></div><div><dt><span class="fa">فیلتر لرزش</span><span class="en">Tremor filtering</span></dt><dd><span class="fa">لرزش فیزیولوژیک ۸ تا ۱۲ Hz؛ حذف با فیلتر پایین‌گذر یا کالمن بدون تأخیر چشمگیر.</span><span class="en">Physiological tremor lies at 8–12 Hz; removed by a low-pass or Kalman filter without noticeable lag.</span></dd></div><div><dt><span class="fa">ایمنی</span><span class="en">Safety</span></dt><dd><span class="fa">محدوده کاری و سرعت، نگهبان زمانی (watchdog)، توقف اضطراری و بازگشت به حالت امن.</span><span class="en">Workspace and velocity limits, a watchdog timer, emergency stop and fail-safe state.</span></dd></div><div><dt><span class="fa">معیارها</span><span class="en">Metrics</span></dt><dd><span class="fa">خطای ردیابی (RMSE)، تأخیر حلقه، دقت تکرارپذیری و نرخ نقض قید RCM.</span><span class="en">Tracking RMSE, loop latency, repeatability and the rate of RCM-constraint violation.</span></dd></div></dl><p class="abs" style="font-size:14px;color:var(--muted)"><span class="fa">مشخصات فنی روش کار است، نه نتایج گزارش‌شده.</span><span class="en">Technical specification of the approach, not reported results.</span></p></article>
+  </section>
+
+  <section class="block" id="analyze">
+    <div class="head"><h2><span class="fa">آزمایشگاه تحلیل: صدا و عکس</span><span class="en">Analysis lab: voice and eye image</span></h2><p class="lead" style="margin:0"><span class="fa">فایل را انتخاب کنید؛ همه‌چیز فقط در مرورگر شما اجرا می‌شود و هیچ‌جا آپلود نمی‌شود. این ابزار ویژگی‌ها را استخراج می‌کند و تشخیص پزشکی نیست.</span><span class="en">Pick a file. Everything runs in your browser and nothing is uploaded. It extracts features and is not a medical diagnosis.</span></p></div>
+    <div class="az">
+      <div class="azc"><h3 style="margin:0"><span class="fa">۱. تحلیل صدا</span><span class="en">1. Voice analysis</span></h3><input id="vIn" type="file" accept="audio/*"><canvas id="vC" width="1200" height="360"></canvas><div class="met" id="vO"></div><p class="abs" style="font-size:13px;color:var(--muted);margin:0"><span class="fa">بهترین ورودی: واکه کشیده «آ» در محیط ساکت. جیتر و شیمر تخمین فریم‌محور هستند. آستانه‌ها (۱٫۰۴٪ و ۳٫۸۱٪) مرجع‌های رایج مقالات‌اند، نه ملاک بیماری.</span><span class="en">Best input: a sustained /a/ in a quiet room. Jitter and shimmer are frame-based estimates. Thresholds (1.04% and 3.81%) are common literature references, not disease criteria.</span></p></div>
+      <div class="azc"><h3 style="margin:0"><span class="fa">۲. عنبیه: قطعه‌بندی، بازکردن و تطبیق</span><span class="en">2. Iris: segment, unwrap and match</span></h3><label class="fl"><span class="fa">تصویر A</span><span class="en">Image A</span><input id="iA" type="file" accept="image/*"></label><label class="fl"><span class="fa">تصویر B (برای تطبیق)</span><span class="en">Image B (to match)</span><input id="iB" type="file" accept="image/*"></label><div class="ir"><canvas id="iCa" width="320" height="240"></canvas><canvas id="iCb" width="320" height="240"></canvas></div><canvas id="iSa" width="256" height="32" class="strip"></canvas><canvas id="iSb" width="256" height="32" class="strip"></canvas><div class="met" id="iO"></div><p class="abs" style="font-size:13px;color:var(--muted);margin:0"><span class="fa">روش دوگمن ساده‌شده (بدون ماسک پلک)؛ برای عکس‌های واضح مادون‌قرمز بهتر کار می‌کند. نتیجه تشخیص بیماری چشم نیست.</span><span class="en">Simplified Daugman pipeline (no eyelid mask); works best on clear near-infrared images. The result is not an eye-disease diagnosis.</span></p></div>
+    </div>
+    <div class="azc" style="margin-top:20px"><h3 style="margin:0"><span class="fa">۳. اتصال مدل آموزش‌دیده (ONNX)</span><span class="en">3. Plug in a trained model (ONNX)</span></h3>
+      <p class="abs" style="margin:0;font-size:14px"><span class="fa">مدل خودتان را (فایل .onnx) انتخاب کنید تا روی آخرین صدا یا تصویر A اجرا شود. اجرا در مرورگر است. صدا: بردار ۷تایی [F0 mean, F0 SD, Jitter, Shimmer, HNR, Centroid, Voiced] به‌صورت float32 با شکل [1,7]. تصویر: [1,C,H,W] با مقدار ۰ تا ۱ (C=1 یا 3).</span><span class="en">Choose your own .onnx model to run on the latest voice or image A. It runs in the browser. Voice: float32 vector [F0 mean, F0 SD, Jitter, Shimmer, HNR, Centroid, Voiced], shape [1,7]. Image: [1,C,H,W] scaled 0 to 1 (C=1 or 3).</span></p>
+      <select id="mT" style="padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)"><option value="v">Voice / صدا</option><option value="i">Image / تصویر</option></select>
+      <input id="mF" type="file" accept=".onnx"><button class="btn primary sm" id="mR" type="button"><span class="fa">اجرای مدل</span><span class="en">Run model</span></button><div class="met" id="mO"></div>
+      <p class="abs" style="margin:0;font-size:13px;color:var(--muted)"><span class="fa">خروجی فقط برای پژوهش است و تشخیص پزشکی نیست؛ اعتبار آن به داده و اعتبارسنجی مدل شما بستگی دارد.</span><span class="en">Output is for research only and is not a medical diagnosis; its validity depends on your model’s data and validation.</span></p></div>
+  </section>
+
+  <section class="block" id="lab">
+    <div class="head"><h2><span class="fa">خودتان امتحان کنید: دو نمایش تعاملی</span><span class="en">Try it: two interactive demos</span></h2><p><span class="fa">اول تطبیق کد عنبیه و تعادل پذیرش و رد اشتباه؛ بعد فیلتر کالمن، ابزار اصلی رباتیک برای تخمین حالت از حسگر نویزی.</span><span class="en">First, iris-code matching and the trade-off between false accepts and rejects. Then a Kalman filter, a core robotics tool for estimating state from a noisy sensor.</span></p></div>
+    <div class="lab">
+      <div class="lab-card">
+        <h3><span class="fa">۱. مقایسه دو کد</span><span class="en">1. Compare two codes</span></h3>
+        <div class="codes">
+          <figure><figcaption><span class="fa">کد A · ثبت‌شده</span><span class="en">Code A · enrolled</span></figcaption><div class="bits" id="gA" role="img" aria-label="Enrolled iris code"></div></figure>
+          <figure><figcaption><span class="fa">کد B · نمونه جدید</span><span class="en">Code B · probe</span></figcaption><div class="bits b" id="gB" role="img" aria-label="Probe iris code with differing bits highlighted"></div></figure>
+        </div>
+        <div class="row" role="group" aria-label="Probe type">
+          <button class="pill" type="button" id="bSame" aria-pressed="true"><span class="fa">همان چشم</span><span class="en">Same eye</span></button>
+          <button class="pill" type="button" id="bDiff" aria-pressed="false"><span class="fa">چشم دیگر</span><span class="en">Different eye</span></button>
+          <button class="pill" type="button" id="bNew"><span class="fa">نمونه تازه ↻</span><span class="en">New sample ↻</span></button>
+        </div>
+        <div class="readout" aria-live="polite">
+          <div><small><span class="fa">بیت‌های متفاوت</span><span class="en">Bits differing</span></small><b id="rBits">0/128</b></div>
+          <div><small><span class="fa">فاصله همینگ</span><span class="en">Hamming dist.</span></small><b id="rHd">0.00</b></div>
+          <div><small><span class="fa">تصمیم</span><span class="en">Decision</span></small><b id="rDec">match</b></div>
+        </div>
+        <p class="fine" style="margin:0"><span class="fa">خانه‌های صورتی بیت‌هایی‌اند که میان دو کد فرق دارند. دو تصویر از یک چشم معمولاً در کسر کوچکی از بیت‌ها اختلاف دارند؛ چشم‌های متفاوت نزدیک نصف بیت‌ها.</span><span class="en">Pink cells are bits that differ between the two codes. Two images of the same eye differ in a small fraction of bits; different eyes differ in about half.</span></p>
+      </div>
+      <div class="lab-card">
+        <h3><span class="fa">۲. آستانه تصمیم</span><span class="en">2. The decision threshold</span></h3>
+        <div class="dist-wrap"><canvas id="dist" role="img" aria-label="Distributions of same-eye and different-eye Hamming distances with a movable threshold"></canvas></div>
+        <div class="legend"><span><i style="background:var(--accent)"></i><span class="fa">همان چشم</span><span class="en">Same eye</span></span><span><i style="background:var(--accent2)"></i><span class="fa">چشم دیگر</span><span class="en">Different eye</span></span><span><i style="background:var(--ink)"></i><span class="fa">نمونه فعلی</span><span class="en">Current sample</span></span></div>
+        <div class="slider"><div class="top"><span><span class="fa">آستانه</span><span class="en">Threshold</span></span><b id="tVal">0.34</b></div><input type="range" id="thr" min="0.2" max="0.45" step="0.005" value="0.34" aria-label="Decision threshold"></div>
+        <div class="readout">
+          <div><small><span class="fa">پذیرش اشتباه</span><span class="en">False accept</span></small><b id="rFar">0%</b></div>
+          <div><small><span class="fa">رد اشتباه</span><span class="en">False reject</span></small><b id="rFrr">0%</b></div>
+          <div><small>EER</small><b id="rEer">≈ 0.30</b></div>
+        </div>
+      </div>
+      <div class="lab-card lab-wide">
+        <h3><span class="fa">۳. رباتیک: فیلتر کالمن روی حسگر نویزی</span><span class="en">3. Robotics: a Kalman filter on a noisy sensor</span></h3>
+        <div class="kgrid">
+          <div>
+            <div class="kplot"><canvas id="kal" role="img" aria-label="True trajectory, noisy measurements and Kalman filter estimate over time"></canvas></div>
+            <div class="legend" style="margin-top:12px"><span><i style="background:var(--ink)"></i><span class="fa">مسیر واقعی</span><span class="en">True path</span></span><span><i style="background:var(--muted)"></i><span class="fa">اندازه‌گیری نویزی</span><span class="en">Noisy measurement</span></span><span><i style="background:var(--accent)"></i><span class="fa">تخمین کالمن</span><span class="en">Kalman estimate</span></span></div>
+          </div>
+          <div class="kctl">
+            <div class="slider"><div class="top"><span><span class="fa">نویز حسگر (σ)</span><span class="en">Sensor noise (σ)</span></span><b id="kRv">14</b></div><input type="range" id="kR" min="2" max="30" step="1" value="14" aria-label="Sensor noise"></div>
+            <div class="slider"><div class="top"><span><span class="fa">اعتماد به مدل حرکت (Q)</span><span class="en">Process noise (Q)</span></span><b id="kQv">0.01</b></div><input type="range" id="kQ" min="-4" max="0" step="0.1" value="-2" aria-label="Process noise, log scale"></div>
+            <div class="readout">
+              <div><small><span class="fa">خطای خام</span><span class="en">Raw RMSE</span></small><b id="kRaw">0</b></div>
+              <div><small><span class="fa">خطای فیلتر</span><span class="en">Filtered</span></small><b id="kFil">0</b></div>
+              <div><small><span class="fa">کاهش خطا</span><span class="en">Error cut</span></small><b id="kCut" class="ok">0%</b></div>
+            </div>
+            <div class="row"><button class="pill" type="button" id="kNew"><span class="fa">نویز تازه ↻</span><span class="en">New noise ↻</span></button></div>
+            <p class="fine" style="margin:0"><span class="fa">Q کوچک یعنی به مدل حرکت بیشتر اعتماد می‌کنیم و تخمین نرم‌تر ولی کندتر در پاسخ به تغییر است؛ Q بزرگ یعنی به اندازه‌گیری‌ها نزدیک‌تر می‌شویم.</span><span class="en">A small Q trusts the motion model: smoother, but slower to react. A large Q follows the measurements more closely.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="fine"><span class="fa">کدها، توزیع‌ها و حسگر نویزی شبیه‌سازی‌شده‌اند و فقط برای فهم مفهوم‌اند؛ نتیجه آزمایش‌های من نیستند.</span><span class="en">The codes, distributions and sensor noise are simulated to illustrate each idea. They are not results from my own experiments.</span></p>
+  </section>
+
+  <section class="block" id="research">
+    <div class="head"><h2><span class="fa">حوزه‌های کاری</span><span class="en">Areas of work</span></h2></div>
+    <div class="rgrid">
+      <article class="rcard"><h3><span class="fa">یادگیری ماشین برای سیگنال‌های سلامت</span><span class="en">Machine learning for health signals</span></h3><p><span class="fa">صدا فقط کلمه نیست. پایداری زیر و بمی، نفس‌دار بودن، شکل طیف و زمان‌بندی همه با وضعیت بدن تغییر می‌کنند و یادگیری ماشین می‌تواند الگوهایی را ببیند که گوش انسان نمی‌شنود. کار من در این حوزه می‌پرسد چه زمانی این الگوها سیگنال واقعی‌اند و چه زمانی فقط اثر میکروفون، اتاق و گوینده.</span><span class="en">Speech carries more than words. Pitch stability, breathiness, spectral shape and timing all shift with the state of the body, and machine learning can pick up patterns that are hard to hear. My work here asks when such patterns are real signal and when they are artefacts of the microphone, the room and the speaker.</span></p></article>
+      <article class="rcard"><h3><span class="fa">بینایی ماشین و بیومتریک</span><span class="en">Computer vision and biometrics</span></h3><p><span class="fa">عنبیه از متمایزترین ساختارهای بدن است: سال‌ها پایدار می‌ماند و بافت غنی دارد. سامانه‌های تشخیص عنبیه یک عکس را به یک کد فشرده تبدیل می‌کنند و کدها را با فاصله مقایسه می‌کنند. من کل مسیر از تصویر خام تا تطبیق را کار می‌کنم، از جمله بخش‌های کم‌جلوه‌تر مثل قطعه‌بندی، نرمال‌سازی و کنترل کیفیت.</span><span class="en">The iris is one of the most distinctive structures in the body, stable for years and rich in texture. Recognition systems turn a photograph into a compact code and compare codes by distance. I work on the full path from raw image to match, including the unglamorous parts: segmentation, normalization and quality control.</span></p></article>
+      <article class="rcard"><h3><span class="fa">مهندسی داده</span><span class="en">Data engineering</span></h3><p><span class="fa">مدل فقط به اندازه داده‌اش خوب است. برایم مهم است داده چگونه جمع، برچسب‌گذاری، تقسیم و نسخه‌بندی می‌شود، چون نشت اطلاعات میان آموزش و آزمون رایج‌ترین دلیل شکست نتایج امیدوارکننده است.</span><span class="en">A model is only as good as the data behind it. I care about how datasets are collected, labelled, split and versioned, because leakage between training and test data is the most common reason a promising result fails to hold up.</span></p></article>
+      <article class="rcard"><h3><span class="fa">سامانه‌های هوشمند</span><span class="en">Intelligent systems</span></h3><p><span class="fa">از دوره رباتیک تا مسابقه چت‌بات، رشته مشترک این است که مدل با جهان حلقه ببندد: حس کند، تصمیم بگیرد، پاسخ بدهد و صادقانه ارزیابی شود.</span><span class="en">From robotics coursework to a national chatbot competition, the common thread is closing the loop between a model and the world: sensing, deciding, responding, and being evaluated honestly.</span></p></article>
+    </div>
+  </section>
+
+  <section class="block" id="bio">
+    <div class="head"><h2><span class="fa">بیوانفورماتیک: مقاله‌ها و سخن‌ها</span><span class="en">Bioinformatics: articles and sayings</span></h2></div>
+    <div class="rgrid"><article class="rcard"><h3><span class="fa">همترازی توالی: از نیدلمن–وانش تا BLAST</span><span class="en">Sequence alignment: from Needleman–Wunsch to BLAST</span></h3><p><span class="fa">برنامه‌ریزی پویا همترازی بهینه سراسری می‌دهد اما برای پایگاه‌های بزرگ کند است؛ BLAST با دانه‌های کوتاه و گسترش موضعی سرعت را می‌خرد و با امتیاز E معناداری را می‌سنجد.</span><span class="en">Dynamic programming gives optimal global alignments but is slow on large databases; BLAST trades exactness for speed with short seeds and local extension, and scores significance with the E-value.</span></p><p class="cite" style="margin-top:10px;font:500 12.5px var(--f-mono);color:var(--muted)">[17][18]</p></article><article class="rcard"><h3><span class="fa">RNA-seq: از ریدها تا بیان افتراقی</span><span class="en">RNA-seq: from reads to differential expression</span></h3><p><span class="fa">همترازی یا شبه‌همترازی (STAR، Salmon)، شمارش، سپس مدل دوجمله‌ای منفی با انقباض واریانس (DESeq2). تکرار زیستی و اثر دسته مهم‌تر از انتخاب ابزار است.</span><span class="en">Alignment or pseudo-alignment (STAR, Salmon), counting, then a negative-binomial model with variance shrinkage (DESeq2). Biological replicates and batch effects matter more than tool choice.</span></p><p class="cite" style="margin-top:10px;font:500 12.5px var(--f-mono);color:var(--muted)">[19][20][21]</p></article><article class="rcard"><h3><span class="fa">تک‌سلولی: خوشه‌ها همیشه نوع سلول نیستند</span><span class="en">Single-cell: clusters are not always cell types</span></h3><p><span class="fa">UMAP و t-SNE فاصله‌ها را تغییر می‌دهند؛ خوشه‌بندی را باید با نشانگرها و اعتبارسنجی مستقل تأیید کرد. Scanpy مسیر استاندارد را می‌دهد.</span><span class="en">UMAP and t-SNE distort distances; clusters need marker genes and independent validation. Scanpy provides the standard workflow.</span></p><p class="cite" style="margin-top:10px;font:500 12.5px var(--f-mono);color:var(--muted)">[23]</p></article><article class="rcard"><h3><span class="fa">مدل‌های زبانی پروتئین و AlphaFold</span><span class="en">Protein language models and AlphaFold</span></h3><p><span class="fa">ESM نشان داد ساختار و عملکرد از توالی‌های بدون برچسب پدید می‌آیند؛ AlphaFold ساختار را با دقت نزدیک به تجربی پیش‌بینی کرد. هنوز پویایی و برهم‌کنش دشوارند.</span><span class="en">ESM showed structure and function emerge from unlabelled sequences; AlphaFold predicted structure near experimental accuracy. Dynamics and interactions remain hard.</span></p><p class="cite" style="margin-top:10px;font:500 12.5px var(--f-mono);color:var(--muted)">[24][25]</p></article><article class="rcard"><h3><span class="fa">نشت همولوژی در یادگیری ژنومی</span><span class="en">Homology leakage in genomic ML</span></h3><p><span class="fa">پروتئین‌ها و توالی‌های همولوگ در آموزش و آزمون یعنی حفظ‌کردن به‌جای یادگیری. تقسیم بر اساس خوشه توالی، همتای زیستی «تقسیم بر اساس فرد» است.</span><span class="en">Homologous sequences in train and test means memorising, not learning. Splitting by sequence cluster is the biological twin of subject-wise splits.</span></p><p class="cite" style="margin-top:10px;font:500 12.5px var(--f-mono);color:var(--muted)">[11][26][27]</p></article><article class="rcard"><h3><span class="fa">خط لوله‌های بازتولیدپذیر</span><span class="en">Reproducible pipelines</span></h3><p><span class="fa">Snakemake و Nextflow گام‌ها، نسخه‌ها و محیط‌ها را ثبت می‌کنند تا هر شکل مقاله دوباره از داده خام ساخته شود؛ بازتولیدپذیری ویژگی طراحی است نه کار پایانی.</span><span class="en">Snakemake and Nextflow record steps, versions and environments so every figure rebuilds from raw data; reproducibility is a design feature, not a final chore.</span></p><p class="cite" style="margin-top:10px;font:500 12.5px var(--f-mono);color:var(--muted)">[28][29]</p></article></div>
+    <div class="quotes"><blockquote class="q"><p><span class="fa">در زیست‌شناسی هیچ چیز معنا ندارد مگر در پرتو تکامل.</span><span class="en">Nothing in biology makes sense except in the light of evolution.</span></p><footer>Theodosius Dobzhansky, 1973</footer></blockquote><blockquote class="q"><p><span class="fa">همه مدل‌ها نادرست‌اند، اما بعضی مفیدند.</span><span class="en">All models are wrong, but some are useful.</span></p><footer>George E. P. Box, 1976</footer></blockquote><blockquote class="q"><p><span class="fa">آنچه نتوانم بسازم، نمی‌فهمم.</span><span class="en">What I cannot create, I do not understand.</span></p><footer>Richard Feynman</footer></blockquote><blockquote class="q"><p><span class="fa">اگر می‌خواهید عملکرد را بفهمید، ساختار را مطالعه کنید.</span><span class="en">If you want to understand function, study structure.</span></p><footer>Francis Crick, 1988</footer></blockquote></div>
+  </section>
+
+  <section class="block" id="notes">
+    <div class="head"><h2><span class="fa">یادداشت‌های فنی</span><span class="en">Technical notes</span></h2></div>
+
+    <article class="note">
+      <div class="m"><span class="fa">یادداشت · ۲ دقیقه</span><span class="en">Note · 2 min</span></div>
+      <div><h3><span class="fa">چرا صدا بیومارکر امیدوارکننده‌ای است</span><span class="en">Why voice is a promising biomarker</span></h3>
+      <p><span class="fa">صدا حاصل زنجیره‌ای بلند است: ریه، تارهای صوتی، گلو، دهان و دستگاه عصبی‌ای که همه را هماهنگ می‌کند. بیماری می‌تواند هر حلقه را مختل کند. گروه‌های پژوهشی تفاوت‌های آکوستیکی میان افراد دارای دیابت نوع ۲ و افراد سالم گزارش کرده‌اند، اما نتایج به شیوه جمع‌آوری داده بسیار حساس است. مدلی که میکروفون را تشخیص بدهد، بیماری را تشخیص نداده است. به همین دلیل کنترل دستگاه ضبط، محیط، سن و جنسیت به اندازه خود مدل اهمیت دارد.</span><span class="en">A voice is produced by a long chain: lungs, vocal folds, throat, mouth, and the nervous system that coordinates them. Disease can disturb any link. Research groups have reported acoustic differences between people with and without type 2 diabetes, but the results are sensitive to how the data is collected. A model that detects the microphone has not detected the disease. That is why controlling for recording device, environment, age and sex matters as much as the model itself.</span></p></div>
+    </article>
+
+    <article class="note">
+      <div class="m"><span class="fa">یادداشت · ۲ دقیقه</span><span class="en">Note · 2 min</span></div>
+      <div><h3><span class="fa">تشخیص عنبیه چگونه کار می‌کند</span><span class="en">How iris recognition works</span></h3>
+      <p><span class="fa">روش کلاسیک دوگمن عنبیه را در چهار گام می‌خواند. اول، مرز مردمک و عنبیه پیدا می‌شود. دوم، حلقه عنبیه به یک نوار مستطیلی باز می‌شود تا اتساع مردمک اثر نگذارد. سوم، فیلترهای گابور فاز بافت را به یک کد دودویی تبدیل می‌کنند. چهارم، دو کد با فاصله همینگ، یعنی کسر بیت‌های متفاوت، مقایسه می‌شوند. دو تصویر از یک چشم بیت‌های بسیار کمتری نسبت به دو چشم متفاوت اختلاف دارند؛ فاصله چشم‌های متفاوت نزدیک ۰٫۵ جمع می‌شود.</span><span class="en">The classical method of Daugman reads the iris in four steps. First, the pupil and iris boundaries are found. Second, the iris ring is unwrapped into a rectangular strip so that pupil dilation no longer matters. Third, Gabor filters turn the texture phase into a binary code. Fourth, two codes are compared by Hamming distance, the fraction of bits that differ. Two images of the same eye differ in far fewer bits than images of different eyes, whose distances cluster near 0.5.</span><sup><a href="#ref1">[1]</a></sup></p></div>
+    </article>
+
+    <article class="note">
+      <div class="m"><span class="fa">یادداشت · ۲ دقیقه</span><span class="en">Note · 2 min</span></div>
+      <div><h3><span class="fa">نشت داده، شکست خاموش ارزیابی</span><span class="en">Data leakage, the quiet failure of evaluation</span></h3>
+      <p><span class="fa">اگر دو ضبط از یک فرد هم در آموزش باشند هم در آزمون، مدل می‌تواند آدم را بشناسد به‌جای آنکه بیماری را بشناسد، و دقت بالا گمراه‌کننده می‌شود. راه‌حل ساده ولی نادیده‌گرفته‌شده این است که تقسیم داده همیشه بر اساس فرد انجام شود، پیش‌پردازش فقط روی داده آموزش برازش شود و آزمون تا لحظه آخر دست‌نخورده بماند.</span><span class="en">If two recordings of the same person appear in both training and test sets, a model can learn to recognize the person instead of the condition, and a high accuracy becomes misleading. The remedy is simple and often skipped: split data by subject, fit every preprocessing step on the training set only, and keep the test set untouched until the very end.</span></p></div>
+    </article>
+
+    <article class="note">
+      <div class="m"><span class="fa">یادداشت · ۲ دقیقه</span><span class="en">Note · 2 min</span></div>
+      <div><h3><span class="fa">وقتی احتمال باید واقعاً احتمال باشد</span><span class="en">When a probability should mean a probability</span></h3>
+      <p><span class="fa">مدلی که برای هزار نمونه «۰٫۸» می‌گوید باید در حدود هشتصد مورد درست بگوید. اما شبکه‌های عصبی امروزی معمولاً بیش‌ازحد مطمئن‌اند و این وعده را زیر پا می‌گذارند. در غربالگری پزشکی این مهم است، چون عدد خروجی به تصمیم تبدیل می‌شود. کالیبراسیون را با نمودار اطمینان و خطای کالیبراسیون مورد انتظار (ECE) می‌سنجند و ساده‌ترین اصلاح، مقیاس‌دهی دما روی داده اعتبارسنجی است.</span><span class="en">A model that says 0.8 on a thousand cases should be right on about eight hundred of them. Modern neural networks tend to be overconfident and break that promise. In medical screening it matters, because the output number becomes a decision. Calibration is measured with reliability diagrams and expected calibration error (ECE), and the simplest fix is temperature scaling fitted on a validation set.</span><sup><a href="#ref10">[10]</a></sup></p></div>
+    </article>
+
+    <article class="note">
+      <div class="m"><span class="fa">یادداشت · ۲ دقیقه</span><span class="en">Note · 2 min</span></div>
+      <div><h3><span class="fa">رباتیک یعنی بستن حلقه با نویز</span><span class="en">Robotics is closing a loop through noise</span></h3>
+      <p><span class="fa">ربات هیچ‌وقت حالت واقعی خودش را نمی‌بیند؛ فقط اندازه‌گیری‌های نویزی دارد. فیلتر کالمن پیش‌بینی مدل حرکت را با اندازه‌گیری ترکیب می‌کند و وزن هر کدام را از عدم‌قطعیتشان می‌گیرد. وقتی ربات هم نقشه می‌سازد و هم جای خودش را در آن می‌یابد، به SLAM می‌رسیم، که در آن بستن حلقه، یعنی شناختن مکانی که قبلاً دیده شده، خطای انباشته را اصلاح می‌کند.</span><span class="en">A robot never sees its true state, only noisy measurements. A Kalman filter blends the motion model's prediction with the measurement, weighting each by its uncertainty. When the robot must also build a map and locate itself in it, we arrive at SLAM, where loop closure, recognizing a place seen before, corrects the accumulated drift.</span><sup><a href="#ref16">[16]</a></sup> <sup><a href="#ref9">[9]</a></sup> <sup><a href="#ref13">[13]</a></sup></p></div>
+    </article>
+  </section>
+
+  <section class="block" id="reading">
+    <div class="head"><h2><span class="fa">فهرست مطالعه</span><span class="en">Reading list</span></h2></div>
+    <ol class="refs">
+      <li id="ref1"><span class="n">[1]</span><span class="c"><b>J. Daugman.</b> How iris recognition works. <i>IEEE Transactions on Circuits and Systems for Video Technology</i>, 14(1), 2004.</span><span class="t"><span class="fa">بیومتریک</span><span class="en">Biometrics</span></span></li>
+      <li id="ref2"><span class="n">[2]</span><span class="c"><b>K. He, X. Zhang, S. Ren, J. Sun.</b> Deep residual learning for image recognition. <i>CVPR</i>, 2016.</span><span class="t"><span class="fa">بینایی</span><span class="en">Vision</span></span></li>
+      <li id="ref3"><span class="n">[3]</span><span class="c"><b>A. Vaswani et al.</b> Attention is all you need. <i>NeurIPS</i>, 2017.</span><span class="t"><span class="fa">مدل‌های توالی</span><span class="en">Sequence models</span></span></li>
+      <li id="ref4"><span class="n">[4]</span><span class="c"><b>A. Baevski, Y. Zhou, A. Mohamed, M. Auli.</b> wav2vec 2.0: a framework for self-supervised learning of speech representations. <i>NeurIPS</i>, 2020.</span><span class="t"><span class="fa">گفتار</span><span class="en">Speech</span></span></li>
+      <li id="ref5"><span class="n">[5]</span><span class="c"><b>A. Dosovitskiy et al.</b> An image is worth 16x16 words: transformers for image recognition at scale. <i>ICLR</i>, 2021.</span><span class="t"><span class="fa">بینایی</span><span class="en">Vision</span></span></li>
+      <li id="ref6"><span class="n">[6]</span><span class="c"><b>A. Radford et al.</b> Robust speech recognition via large-scale weak supervision. <i>ICML</i>, 2023.</span><span class="t"><span class="fa">گفتار</span><span class="en">Speech</span></span></li>
+      <li id="ref7"><span class="n">[7]</span><span class="c"><b>D. P. Kingma, J. Ba.</b> Adam: a method for stochastic optimization. <i>ICLR</i>, 2015.</span><span class="t"><span class="fa">بهینه‌سازی</span><span class="en">Optimization</span></span></li>
+      <li id="ref8"><span class="n">[8]</span><span class="c"><b>J. G. Daugman.</b> High confidence visual recognition of persons by a test of statistical independence. <i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>, 15(11), 1993.</span><span class="t"><span class="fa">بیومتریک</span><span class="en">Biometrics</span></span></li>
+      <li id="ref9"><span class="n">[9]</span><span class="c"><b>S. Thrun, W. Burgard, D. Fox.</b> Probabilistic Robotics. <i>MIT Press</i>, 2005.</span><span class="t"><span class="fa">رباتیک</span><span class="en">Robotics</span></span></li>
+      <li id="ref10"><span class="n">[10]</span><span class="c"><b>C. Guo, G. Pleiss, Y. Sun, K. Q. Weinberger.</b> On calibration of modern neural networks. <i>ICML</i>, 2017.</span><span class="t"><span class="fa">کالیبراسیون</span><span class="en">Calibration</span></span></li>
+      <li id="ref11"><span class="n">[11]</span><span class="c"><b>S. Kaufman, S. Rosset, C. Perlich, O. Stitelman.</b> Leakage in data mining: formulation, detection, and avoidance. <i>ACM Transactions on Knowledge Discovery from Data</i>, 6(4), 2012.</span><span class="t"><span class="fa">ارزیابی</span><span class="en">Evaluation</span></span></li>
+      <li id="ref12"><span class="n">[12]</span><span class="c"><b>F. Eyben et al.</b> The Geneva Minimalistic Acoustic Parameter Set (GeMAPS) for voice research and affective computing. <i>IEEE Transactions on Affective Computing</i>, 7(2), 2016.</span><span class="t"><span class="fa">گفتار</span><span class="en">Speech</span></span></li>
+      <li id="ref13"><span class="n">[13]</span><span class="c"><b>R. Mur-Artal, J. M. M. Montiel, J. D. Tardós.</b> ORB-SLAM: a versatile and accurate monocular SLAM system. <i>IEEE Transactions on Robotics</i>, 31(5), 2015.</span><span class="t"><span class="fa">رباتیک</span><span class="en">Robotics</span></span></li>
+      <li id="ref14"><span class="n">[14]</span><span class="c"><b>O. Ronneberger, P. Fischer, T. Brox.</b> U-Net: convolutional networks for biomedical image segmentation. <i>MICCAI</i>, 2015.</span><span class="t"><span class="fa">قطعه‌بندی</span><span class="en">Segmentation</span></span></li>
+      <li id="ref15"><span class="n">[15]</span><span class="c"><b>S. B. Davis, P. Mermelstein.</b> Comparison of parametric representations for monosyllabic word recognition in continuously spoken sentences. <i>IEEE Transactions on Acoustics, Speech, and Signal Processing</i>, 28(4), 1980.</span><span class="t"><span class="fa">گفتار</span><span class="en">Speech</span></span></li>
+      <li id="ref16"><span class="n">[16]</span><span class="c"><b>R. E. Kalman.</b> A new approach to linear filtering and prediction problems. <i>Journal of Basic Engineering</i>, 82(1), 1960.</span><span class="t"><span class="fa">رباتیک</span><span class="en">Robotics</span></span></li>
+    <li id="ref17"><span class="n">[17]</span><span class="c"><b>J. Needleman, C. Wunsch.</b> A general method applicable to the search for similarities in the amino acid sequence of two proteins. <i>Journal of Molecular Biology</i>, 48(3), 1970.</span><span class="t"><span class="fa">بیوانفورماتیک</span><span class="en">Bioinformatics</span></span></li>
+<li id="ref18"><span class="n">[18]</span><span class="c"><b>S. F. Altschul et al.</b> Basic local alignment search tool. <i>Journal of Molecular Biology</i>, 215(3), 1990.</span><span class="t"><span class="fa">بیوانفورماتیک</span><span class="en">Bioinformatics</span></span></li>
+<li id="ref19"><span class="n">[19]</span><span class="c"><b>A. Dobin et al.</b> STAR: ultrafast universal RNA-seq aligner. <i>Bioinformatics</i>, 29(1), 2013.</span><span class="t"><span class="fa">بیوانفورماتیک</span><span class="en">Bioinformatics</span></span></li>
+<li id="ref20"><span class="n">[20]</span><span class="c"><b>M. I. Love, W. Huber, S. Anders.</b> Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. <i>Genome Biology</i>, 15, 550, 2014.</span><span class="t"><span class="fa">بیوانفورماتیک</span><span class="en">Bioinformatics</span></span></li>
+<li id="ref21"><span class="n">[21]</span><span class="c"><b>R. Patro et al.</b> Salmon provides fast and bias-aware quantification of transcript expression. <i>Nature Methods</i>, 14, 2017.</span><span class="t"><span class="fa">بیوانفورماتیک</span><span class="en">Bioinformatics</span></span></li>
+<li id="ref22"><span class="n">[22]</span><span class="c"><b>A. McKenna et al.</b> The Genome Analysis Toolkit. <i>Genome Research</i>, 20(9), 2010.</span><span class="t"><span class="fa">ژنومیکس</span><span class="en">Genomics</span></span></li>
+<li id="ref23"><span class="n">[23]</span><span class="c"><b>F. A. Wolf, P. Angerer, F. J. Theis.</b> SCANPY: large-scale single-cell gene expression data analysis. <i>Genome Biology</i>, 19, 15, 2018.</span><span class="t"><span class="fa">تک‌سلولی</span><span class="en">Single-cell</span></span></li>
+<li id="ref24"><span class="n">[24]</span><span class="c"><b>J. Jumper et al.</b> Highly accurate protein structure prediction with AlphaFold. <i>Nature</i>, 596, 2021.</span><span class="t"><span class="fa">پروتئین</span><span class="en">Proteins</span></span></li>
+<li id="ref25"><span class="n">[25]</span><span class="c"><b>A. Rives et al.</b> Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences. <i>PNAS</i>, 118(15), 2021.</span><span class="t"><span class="fa">پروتئین</span><span class="en">Proteins</span></span></li>
+<li id="ref26"><span class="n">[26]</span><span class="c"><b>Y. Ji et al.</b> DNABERT: pre-trained bidirectional encoder representations from transformers model for DNA-language in genome. <i>Bioinformatics</i>, 37(15), 2021.</span><span class="t"><span class="fa">ژنومیکس</span><span class="en">Genomics</span></span></li>
+<li id="ref27"><span class="n">[27]</span><span class="c"><b>Ž. Avsec et al.</b> Effective gene expression prediction from sequence by integrating long-range interactions. <i>Nature Methods</i>, 18, 2021.</span><span class="t"><span class="fa">ژنومیکس</span><span class="en">Genomics</span></span></li>
+<li id="ref28"><span class="n">[28]</span><span class="c"><b>F. Mölder et al.</b> Sustainable data analysis with Snakemake. <i>F1000Research</i>, 10, 33, 2021.</span><span class="t"><span class="fa">بازتولیدپذیری</span><span class="en">Reproducibility</span></span></li>
+<li id="ref29"><span class="n">[29]</span><span class="c"><b>P. Di Tommaso et al.</b> Nextflow enables reproducible computational workflows. <i>Nature Biotechnology</i>, 35, 2017.</span><span class="t"><span class="fa">بازتولیدپذیری</span><span class="en">Reproducibility</span></span></li>
+<li id="ref30"><span class="n">[30]</span><span class="c"><b>M. Ashburner et al.</b> Gene Ontology: tool for the unification of biology. <i>Nature Genetics</i>, 25, 2000.</span><span class="t"><span class="fa">بیوانفورماتیک</span><span class="en">Bioinformatics</span></span></li>
+<li id="ref31"><span class="n">[31]</span><span class="c"><b>R. H. Taylor, D. Stoianovici.</b> Medical robotics in computer-integrated surgery. <i>IEEE Transactions on Robotics and Automation</i>, 19(5), 2003.</span><span class="t"><span class="fa">رباتیک جراحی</span><span class="en">Surgical robotics</span></span></li>
+<li id="ref32"><span class="n">[32]</span><span class="c"><b>G.-Z. Yang et al.</b> Medical robotics: regulatory, ethical, and legal considerations for increasing levels of autonomy. <i>Science Robotics</i>, 2(4), 2017.</span><span class="t"><span class="fa">رباتیک جراحی</span><span class="en">Surgical robotics</span></span></li>
+<li id="ref33"><span class="n">[33]</span><span class="c"><b>A. M. Okamura.</b> Haptic feedback in robot-assisted minimally invasive surgery. <i>Current Opinion in Urology</i>, 19(1), 2009.</span><span class="t"><span class="fa">رباتیک جراحی</span><span class="en">Surgical robotics</span></span></li>
+</ol>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="contact">
+      <div><h2><span class="fa">تماس</span><span class="en">Contact</span></h2>
+        <p><span class="fa">برای همکاری پژوهشی، پروژه یا گفت‌وگو درباره یادگیری ماشین پیام بدهید.</span><span class="en">Get in touch about research collaboration, projects, or a conversation about machine learning.</span></p>
+        <div class="cta2"><a class="btn primary sm" href="mailto:missroyahamedi@gmail.com"><span class="fa">ایمیل</span><span class="en">Email</span></a><a class="btn ghost sm" href="tel:09964459874"><span class="fa">تماس تلفنی</span><span class="en">Call</span></a><button class="btn ghost sm" type="button" id="vcf"><span class="fa">ذخیره مخاطب</span><span class="en">Save contact</span></button></div>
+      </div>
+      <div class="chans">
+        <div class="chan"><div><div class="lab"><span class="fa">ایمیل</span><span class="en">Email</span></div><div class="val" id="email">missroyahamedi@gmail.com</div></div><button class="copy" type="button" data-copy="email"><span class="fa">کپی</span><span class="en">Copy</span></button></div>
+        <div class="chan"><div><div class="lab"><span class="fa">شماره تماس</span><span class="en">Phone</span></div><div class="val" id="phone">09964459874</div></div><button class="copy" type="button" data-copy="phone"><span class="fa">کپی</span><span class="en">Copy</span></button></div>
+        <div class="chan"><div><div class="lab"><span class="fa">شناسه</span><span class="en">ID</span></div><div class="val" id="handle">missroyahamedi</div></div><button class="copy" type="button" data-copy="handle"><span class="fa">کپی</span><span class="en">Copy</span></button></div>
+      </div>
+    </div>
+  </section>
+
+    </div>
+  </div>
+</div>
+</main>
+
+<button class="totop" id="totop" type="button" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="cmd" id="cmd" role="dialog" aria-modal="true" aria-label="Menu and commands">
+  <div class="cmd-box">
+    <input id="cmdIn" type="text" autocomplete="off" spellcheck="false" placeholder="Go to a section or run a command…" aria-label="Search commands" role="combobox" aria-expanded="true" aria-controls="cmdList">
+    <ul id="cmdList" role="listbox"></ul>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div class="fb"><strong><span class="fa">رویا حامدی</span><span class="en">Roya Hamedi</span></strong><p><span class="fa">مهندسی هوش مصنوعی و داده؛ یادگیری ماشین برای سیگنال، تصویر و زبان.</span><span class="en">AI &amp; data engineer. Machine learning for signals, images and language.</span></p></div>
+    <nav class="fn" aria-label="Footer"><a href="#projects"><span class="fa">پروژه‌ها</span><span class="en">Projects</span></a><a href="#lab"><span class="fa">آزمایشگاه</span><span class="en">Lab</span></a><a href="#reading"><span class="fa">مقاله‌ها</span><span class="en">Papers</span></a><a href="#contact"><span class="fa">تماس</span><span class="en">Contact</span></a></nav>
+    <div class="fc"><a href="mailto:missroyahamedi@gmail.com">missroyahamedi@gmail.com</a><span><span class="fa">تبریز، ایران</span><span class="en">Tabriz, Iran</span></span></div>
+  </div>
+  <div class="wrap legal"><span>© <span class="fa">رویا حامدی ۲۰۲۶</span><span class="en">Roya Hamedi 2026</span></span><a href="#top"><span class="fa">بازگشت به بالا ↑</span><span class="en">Back to top ↑</span></a></div>
+</footer>
+
+<script>
+(function () {
+  var d = document.documentElement;
+  var RM = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* language + theme */
+  document.querySelectorAll('.seg button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var n = b.getAttribute('data-l'); d.lang = n; d.dir = n === 'fa' ? 'rtl' : 'ltr';
+      try { localStorage.setItem('rh-lang', n); } catch (e) {}
+      sizeAll();
+    });
+  });
+  function effectiveTheme() {
+    var a = d.getAttribute('data-theme'); if (a) return a;
+    return 'dark';
+  }
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    var n = effectiveTheme() === 'dark' ? 'light' : 'dark';
+    d.setAttribute('data-theme', n);
+    try { localStorage.setItem('rh-theme', n); } catch (e) {}
+    readColors();
+  });
+
+
+  /* contents highlight + reading progress */
+  var prog = document.getElementById('prog');
+  function onScroll() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (prog) prog.style.width = (max > 0 ? Math.min(100, window.scrollY / max * 100) : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  var tocLinks = document.querySelectorAll('.toc a, .subnav a');
+  if ('IntersectionObserver' in window && tocLinks.length) {
+    var seen = {};
+    var so = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { seen[e.target.id] = e.isIntersecting ? e.boundingClientRect.top : null; });
+      var best = null, bt = Infinity;
+      Object.keys(seen).forEach(function (k) { if (seen[k] !== null && Math.abs(seen[k]) < bt) { bt = Math.abs(seen[k]); best = k; } });
+      if (best) tocLinks.forEach(function (a) { var on = a.getAttribute('href') === '#' + best; a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+      var bar = document.querySelector('.subnav'), cur = bar && bar.querySelector('a.on');
+      if (cur && bar.offsetParent !== null) { try { cur.scrollIntoView({ inline: 'center', block: 'nearest' }); } catch (e) {} }
+    }, { rootMargin: '-20% 0px -55% 0px', threshold: [0, 1] });
+    document.querySelectorAll('.content section[id]').forEach(function (s) { so.observe(s); });
+  }
+
+  /* copy buttons */
+  document.querySelectorAll('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var el = document.getElementById(b.getAttribute('data-copy'));
+      var done = function () {
+        var old = b.innerHTML; b.textContent = d.lang === 'fa' ? 'کپی شد' : 'Copied';
+        setTimeout(function () { b.innerHTML = old; }, 1400);
+      };
+      var sel = function () {
+        var r = document.createRange(); r.selectNodeContents(el);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(el.textContent.trim()).then(done, sel);
+      } else { sel(); }
+    });
+  });
+
+  /* canvases */
+  var C = { accent: '#8FA2FF', accent2: '#F4A9BA', ink: '#EEF0FB', muted: '#939CC4', line: '#252E5C', bg2: '#0E1430' };
+  function readColors() {
+    var cs = getComputedStyle(d);
+    Object.keys(C).forEach(function (k) { var v = cs.getPropertyValue('--' + k).trim(); if (v) C[k] = v; });
+    if (RM) drawAll(1.4);
+  }
+  var PI2 = Math.PI * 2;
+  var ptr = { x: null, y: null };
+  window.addEventListener('pointermove', function (e) { ptr.x = e.clientX; ptr.y = e.clientY; }, { passive: true });
+  function hash(n) { n = Math.sin(n * 127.1 + 311.7) * 43758.5453; return n - Math.floor(n); }
+
+  function mk(id) {
+    var c = document.getElementById(id); if (!c) return null;
+    return { c: c, x: c.getContext('2d'), w: 0, h: 0, vis: true };
+  }
+  var voice = mk('voice'), iris = mk('iris');
+  var all = [voice, iris].filter(Boolean);
+  function size(o) {
+    var r = o.c.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+    o.w = r.width; o.h = r.height;
+    o.c.width = Math.max(1, Math.round(r.width * dpr)); o.c.height = Math.max(1, Math.round(r.height * dpr));
+    o.x.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function sizeAll() { all.forEach(size); if (RM) drawAll(1.4); }
+  if ('ResizeObserver' in window) {
+    var ro = new ResizeObserver(function () { sizeAll(); });
+    all.forEach(function (o) { ro.observe(o.c); });
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { all.forEach(function (o) { if (o.c === e.target) o.vis = e.isIntersecting; }); });
+    });
+    all.forEach(function (o) { io.observe(o.c); });
+  }
+  function rel(o) {
+    var r = o.c.getBoundingClientRect();
+    if (ptr.x === null) return null;
+    return { x: ptr.x - r.left, y: ptr.y - r.top };
+  }
+
+  function bars(o, t, opt) {
+    var g = o.x, w = o.w, h = o.h;
+    g.clearRect(0, 0, w, h);
+    var bw = opt.bw, step = bw + opt.gap, n = Math.ceil(w / step) + 2;
+    var off = t * opt.speed, ioff = Math.floor(off), fr = off - ioff;
+    var scan = ((t * opt.scan) % 1) * (n + 60) - 30;
+    var mid = h * opt.mid;
+    for (var i = 0; i < n; i++) {
+      var k = i + ioff;
+      var env = 0.22 + 0.78 * Math.pow(Math.abs(Math.sin(k * 0.043)), 1.3) * (0.55 + 0.45 * Math.sin(k * 0.012 + 1.3));
+      var a = env * (0.3 + 0.7 * hash(k));
+      var bh = Math.max(3, a * h * opt.amp), x = i * step - fr * step;
+      var dist = Math.abs(i - scan), hot = dist < 16;
+      g.fillStyle = hot ? C.accent : C.muted;
+      g.globalAlpha = hot ? 1 - dist / 22 : 0.45;
+      if (hot && dist < 3) g.fillStyle = C.accent2;
+      var y = mid - bh / 2;
+      if (g.roundRect) { g.beginPath(); g.roundRect(x, y, bw, bh, bw / 2); g.fill(); } else { g.fillRect(x, y, bw, bh); }
+    }
+    g.globalAlpha = 1;
+  }
+
+  var fibers = [];
+  for (var fi = 0; fi < 340; fi++) fibers.push({ a: hash(fi) * PI2, r0: 0.0 + hash(fi + 9) * 0.12, r1: 0.55 + hash(fi + 31) * 0.45, al: 0.18 + hash(fi + 77) * 0.5, c: hash(fi + 5) > 0.72 });
+  function drawIris(o, t) {
+    var g = o.x, w = o.w, h = o.h, cx = w / 2, cy = h * 0.43, R = Math.min(w * 0.42, h * 0.36);
+    g.clearRect(0, 0, w, h);
+    var p = rel(o), pr = 0.34;
+    if (p) { var dd = Math.hypot(p.x - cx, p.y - cy); pr = 0.34 - 0.12 * Math.max(0, 1 - dd / (R * 3.2)); } else { pr = 0.3 + 0.04 * Math.sin(t * 1.4); }
+    var gr = g.createRadialGradient(cx, cy, R * 0.2, cx, cy, R * 1.9);
+    gr.addColorStop(0, C.accent); gr.addColorStop(1, 'rgba(0,0,0,0)');
+    g.globalAlpha = 0.18; g.fillStyle = gr; g.beginPath(); g.arc(cx, cy, R * 1.9, 0, PI2); g.fill(); g.globalAlpha = 1;
+    g.beginPath(); g.arc(cx, cy, R, 0, PI2); g.fillStyle = C.bg2; g.fill();
+    g.lineWidth = 1.1;
+    for (var i = 0; i < fibers.length; i++) {
+      var f = fibers[i], a = f.a + Math.sin(t * 0.3 + i) * 0.004, r0 = R * Math.max(pr, f.r0 + pr * 0.9), r1 = R * f.r1;
+      g.strokeStyle = f.c ? C.accent2 : C.accent; g.globalAlpha = f.al;
+      g.beginPath(); g.moveTo(cx + Math.cos(a) * r0, cy + Math.sin(a) * r0); g.lineTo(cx + Math.cos(a) * r1, cy + Math.sin(a) * r1); g.stroke();
+    }
+    g.globalAlpha = 0.9; g.strokeStyle = C.accent; g.lineWidth = 2; g.beginPath(); g.arc(cx, cy, R, 0, PI2); g.stroke();
+    g.globalAlpha = 0.35; g.lineWidth = 1; g.beginPath(); g.arc(cx, cy, R * 1.12, 0, PI2); g.stroke();
+    g.globalAlpha = 1; g.fillStyle = '#05070f'; g.beginPath(); g.arc(cx, cy, R * pr, 0, PI2); g.fill();
+    g.fillStyle = '#fff'; g.globalAlpha = 0.85; g.beginPath(); g.arc(cx - R * pr * 0.35, cy - R * pr * 0.35, R * 0.05, 0, PI2); g.fill(); g.globalAlpha = 1;
+    var sa = t * 1.1;
+    for (var k = 0; k < 36; k++) {
+      var aa = sa - k * 0.035; g.globalAlpha = (1 - k / 36) * 0.8; g.strokeStyle = C.accent2; g.lineWidth = 2;
+      g.beginPath(); g.arc(cx, cy, R * 1.12, aa - 0.04, aa); g.stroke();
+    }
+    g.globalAlpha = 1; g.strokeStyle = C.accent2; g.lineWidth = 1.5;
+    g.beginPath(); g.moveTo(cx + Math.cos(sa) * R * pr, cy + Math.sin(sa) * R * pr); g.lineTo(cx + Math.cos(sa) * R * 1.12, cy + Math.sin(sa) * R * 1.12); g.stroke();
+    /* unwrapped strip */
+    var sx = w * 0.12, sw = w * 0.76, sy = h * 0.86, sh = h * 0.07, cols = 120, cw = sw / cols;
+    var cur = ((sa % PI2) + PI2) % PI2 / PI2 * cols;
+    for (var c = 0; c < cols; c++) {
+      var hv = hash(c * 1.7) * 0.6 + 0.3 * Math.abs(Math.sin(c * 0.21));
+      g.fillStyle = hash(c + 3) > 0.7 ? C.accent2 : C.accent;
+      g.globalAlpha = Math.abs(c - cur) < 2 ? 1 : 0.18 + hv * 0.5;
+      g.fillRect(sx + c * cw, sy + sh * (1 - hv) * 0.5, Math.max(1, cw - 1), sh * (0.5 + hv * 0.5));
+    }
+    g.globalAlpha = 1;
+  }
+
+  function drawAll(t) {
+    if (voice) bars(voice, t, { bw: 6, gap: 4, speed: 10, scan: 0.09, mid: 0.5, amp: 0.62 });
+    if (iris) drawIris(iris, t);
+  }
+  var t0 = null;
+  function frame(ts) {
+    if (t0 === null) t0 = ts; var t = (ts - t0) / 1000;
+    if (voice && voice.vis) bars(voice, t, { bw: 6, gap: 4, speed: 10, scan: 0.09, mid: 0.5, amp: 0.62 });
+    if (iris && iris.vis) drawIris(iris, t);
+    requestAnimationFrame(frame);
+  }
+  readColors(); sizeAll();
+  if (window.matchMedia) {
+    var mq = matchMedia('(prefers-color-scheme: light)');
+    if (mq.addEventListener) mq.addEventListener('change', readColors);
+  }
+  if (RM) { drawAll(1.4); } else { requestAnimationFrame(frame); }
+  window.addEventListener('load', function () { sizeAll(); readColors(); });
+})();
+</script>
+
+<script>
+/* lab demos, command palette, vCard */
+(function () {
+  var d = document.documentElement;
+  var RM = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var isFa = function () { return d.lang === 'fa'; };
+  var fmt = function (n, dec) { return Number(n).toLocaleString(isFa() ? 'fa-IR' : 'en-US', { minimumFractionDigits: dec || 0, maximumFractionDigits: dec || 0 }); };
+  var tx = function (fa, en) { return isFa() ? fa : en; };
+
+  /* back to top */
+  var tt = $('#totop');
+  window.addEventListener('scroll', function () { tt.classList.toggle('show', window.scrollY > 900); }, { passive: true });
+  tt.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' }); });
+
+  /* ---------- Lab: iris code matching ---------- */
+  var N = 128, A = [], B = [], mode = 'same', hd = 0;
+  var G = { m: 0.18, s: 0.06 }, I = { m: 0.46, s: 0.04 };
+  var gA = $('#gA'), gB = $('#gB'), dist = $('#dist'), thr = $('#thr');
+  function mkBits(el) { for (var i = 0; i < N; i++) el.appendChild(document.createElement('i')); }
+  mkBits(gA); mkBits(gB);
+  var gauss = function () { var u = 1 - Math.random(), v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
+  var clamp = function (x, a, b) { return Math.max(a, Math.min(b, x)); };
+  function erf(x) { var s = x < 0 ? -1 : 1; x = Math.abs(x); var t = 1 / (1 + 0.3275911 * x); var y = 1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-x * x); return s * y; }
+  var Phi = function (z) { return 0.5 * (1 + erf(z / Math.SQRT2)); };
+  var pdf = function (x, g) { var z = (x - g.m) / g.s; return Math.exp(-0.5 * z * z) / (g.s * Math.sqrt(2 * Math.PI)); };
+  var far = function (t) { return Phi((t - I.m) / I.s); };
+  var frr = function (t) { return 1 - Phi((t - G.m) / G.s); };
+  var eerT = (function () { var lo = 0.2, hi = 0.45; for (var i = 0; i < 40; i++) { var m = (lo + hi) / 2; if (far(m) < frr(m)) lo = m; else hi = m; } return (lo + hi) / 2; })();
+
+  function newSample(keepA) {
+    if (!keepA || !A.length) { A = []; for (var i = 0; i < N; i++) A.push(Math.random() < 0.5 ? 1 : 0); }
+    var p = mode === 'same' ? clamp(G.m + G.s * gauss(), 0.02, 0.34) : clamp(I.m + I.s * gauss(), 0.37, 0.56);
+    var k = Math.round(p * N), idx = []; for (var j = 0; j < N; j++) idx.push(j);
+    for (var s = N - 1; s > 0; s--) { var r = Math.floor(Math.random() * (s + 1)), tmp = idx[s]; idx[s] = idx[r]; idx[r] = tmp; }
+    var flip = {}; idx.slice(0, k).forEach(function (x) { flip[x] = 1; });
+    B = A.map(function (b, i) { return flip[i] ? 1 - b : b; });
+    hd = k / N; paintCodes(); update();
+  }
+  function paintCodes() {
+    var ia = gA.children, ib = gB.children;
+    for (var i = 0; i < N; i++) { ia[i].className = A[i] ? 'on' : ''; ib[i].className = (B[i] ? 'on' : '') + (A[i] !== B[i] ? ' diff' : ''); }
+  }
+  function pct(x) { var v = x * 100; return fmt(v, v < 1 ? 2 : v < 10 ? 1 : 0) + '%'; }
+  function update() {
+    var t = +thr.value, k = Math.round(hd * N);
+    $('#rBits').textContent = fmt(k) + '/' + fmt(N);
+    $('#rHd').textContent = fmt(hd, 2);
+    var ok = hd <= t, dec = $('#rDec'); dec.textContent = ok ? tx('تطبیق', 'match') : tx('رد', 'reject'); dec.className = ok ? 'ok' : 'no';
+    $('#tVal').textContent = fmt(t, 3);
+    $('#rFar').textContent = pct(far(t)); $('#rFrr').textContent = pct(frr(t));
+    $('#rEer').textContent = '≈ ' + pct(far(eerT));
+    drawDist();
+  }
+  var dctx = dist.getContext('2d'), dw = 0, dh = 0;
+  function sizeDist() { var r = dist.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2); dw = r.width; dh = r.height; dist.width = Math.round(dw * dpr); dist.height = Math.round(dh * dpr); dctx.setTransform(dpr, 0, 0, dpr, 0, 0); drawDist(); }
+  function drawDist() {
+    if (!dw) return;
+    var cs = getComputedStyle(d), col = function (n) { return cs.getPropertyValue(n).trim(); };
+    var acc = col('--accent'), acc2 = col('--accent2'), ink = col('--ink'), mut = col('--muted'), ln = col('--line');
+    var g = dctx, X0 = 0.0, X1 = 0.7, padB = 26, padT = 14, W = dw, H = dh - padB;
+    var xs = function (v) { return (v - X0) / (X1 - X0) * W; };
+    var ymax = Math.max(pdf(G.m, G), pdf(I.m, I)) * 1.12, ys = function (p) { return padT + (H - padT) * (1 - p / ymax); };
+    g.clearRect(0, 0, dw, dh);
+    g.strokeStyle = ln; g.lineWidth = 1; g.beginPath(); g.moveTo(0, H + .5); g.lineTo(W, H + .5); g.stroke();
+    g.fillStyle = mut; g.font = '11px "JetBrains Mono", monospace'; g.textAlign = 'center';
+    [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7].forEach(function (v) { var x = clamp(xs(v), 12, W - 12); g.fillText(v.toFixed(1), x, H + 17); });
+    var t = +thr.value;
+    function area(gs, from, to, color, alpha) {
+      g.beginPath(); g.moveTo(xs(from), H);
+      for (var v = from; v <= to + 1e-9; v += 0.004) g.lineTo(xs(v), ys(pdf(v, gs)));
+      g.lineTo(xs(to), H); g.closePath(); g.globalAlpha = alpha; g.fillStyle = color; g.fill(); g.globalAlpha = 1;
+    }
+    area(G, X0, X1, acc, 0.16); area(I, X0, X1, acc2, 0.16);
+    area(G, t, X1, acc, 0.7); area(I, X0, t, acc2, 0.7);
+    [[G, acc], [I, acc2]].forEach(function (p) { g.beginPath(); for (var v = X0; v <= X1; v += 0.004) { var x = xs(v), y = ys(pdf(v, p[0])); v === X0 ? g.moveTo(x, y) : g.lineTo(x, y); } g.strokeStyle = p[1]; g.lineWidth = 2; g.stroke(); });
+    g.setLineDash([5, 5]); g.strokeStyle = ink; g.lineWidth = 1.5; g.beginPath(); g.moveTo(xs(t), padT - 4); g.lineTo(xs(t), H); g.stroke(); g.setLineDash([]);
+    var hx = xs(hd); g.strokeStyle = ink; g.lineWidth = 2.5; g.beginPath(); g.moveTo(hx, padT + 14); g.lineTo(hx, H); g.stroke();
+    g.fillStyle = ink; g.beginPath(); g.arc(hx, padT + 14, 5, 0, Math.PI * 2); g.fill();
+  }
+  $('#bSame').addEventListener('click', function () { mode = 'same'; $('#bSame').setAttribute('aria-pressed', 'true'); $('#bDiff').setAttribute('aria-pressed', 'false'); newSample(true); });
+  $('#bDiff').addEventListener('click', function () { mode = 'diff'; $('#bDiff').setAttribute('aria-pressed', 'true'); $('#bSame').setAttribute('aria-pressed', 'false'); newSample(true); });
+  $('#bNew').addEventListener('click', function () { newSample(false); });
+  thr.addEventListener('input', update);
+  if ('ResizeObserver' in window) new ResizeObserver(sizeDist).observe(dist); else window.addEventListener('resize', sizeDist);
+  new MutationObserver(function () { drawDist(); }).observe(d, { attributes: true, attributeFilter: ['data-theme'] });
+  newSample(false); sizeDist();
+
+  /* ---------- Lab 3: Kalman filter ---------- */
+  var KN = 260, nz = [], truth = [], meas = [], est = [], kShown = KN;
+  var kd = $('#kal'), kc = kd.getContext('2d'), kw = 0, kh = 0;
+  for (var ti = 0; ti < KN; ti++) truth.push(45 * Math.sin(ti / 28) + 8 * Math.sin(ti / 14));
+  function reseed() { nz = []; for (var i = 0; i < KN; i++) nz.push(gauss()); }
+  function runK() {
+    var r = +$('#kR').value, q = Math.pow(10, +$('#kQ').value), R = r * r, se1 = 0, se2 = 0;
+    meas = []; est = [];
+    var p = 0, v = 0, a = R, b = 0, c = 1;
+    for (var i = 0; i < KN; i++) {
+      var z = truth[i] + r * nz[i]; meas.push(z);
+      if (i === 0) { p = z; }
+      else {
+        p = p + v;
+        var a2 = a + 2 * b + c + q * 0.25, b2 = b + c + q * 0.5, c2 = c + q; a = a2; b = b2; c = c2;
+        var S = a + R, k0 = a / S, k1 = b / S, y = z - p;
+        p += k0 * y; v += k1 * y; var na = (1 - k0) * a, nb = (1 - k0) * b; c = c - k1 * b; a = na; b = nb;
+      }
+      est.push(p); se1 += (z - truth[i]) * (z - truth[i]); se2 += (p - truth[i]) * (p - truth[i]);
+    }
+    var raw = Math.sqrt(se1 / KN), fil = Math.sqrt(se2 / KN), cut = (1 - fil / raw) * 100;
+    $('#kRv').textContent = fmt(r); $('#kQv').textContent = fmt(q, q < 0.01 ? 4 : q < 0.1 ? 3 : 2);
+    $('#kRaw').textContent = fmt(raw, 1); $('#kFil').textContent = fmt(fil, 1);
+    var kc2 = $('#kCut'); kc2.textContent = fmt(Math.abs(cut), 0) + '%'; kc2.className = cut >= 0 ? 'ok' : 'no';
+    drawK();
+  }
+  function sizeK() { var r = kd.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2); kw = r.width; kh = r.height; kd.width = Math.round(kw * dpr); kd.height = Math.round(kh * dpr); kc.setTransform(dpr, 0, 0, dpr, 0, 0); drawK(); }
+  function drawK() {
+    if (!kw || !meas.length) return;
+    var cs = getComputedStyle(d), col = function (n) { return cs.getPropertyValue(n).trim(); };
+    var acc = col('--accent'), ink = col('--ink'), mut = col('--muted'), ln = col('--line'), g = kc;
+    var X = function (i) { return 10 + i / (KN - 1) * (kw - 20); }, Y = function (v) { return kh / 2 - v / 100 * (kh / 2 - 12); };
+    g.clearRect(0, 0, kw, kh);
+    g.strokeStyle = ln; g.lineWidth = 1; g.beginPath(); g.moveTo(0, Y(0)); g.lineTo(kw, Y(0)); g.stroke();
+    var n = Math.min(KN, Math.floor(kShown));
+    g.fillStyle = mut; g.globalAlpha = 0.55;
+    for (var i = 0; i < n; i++) { g.beginPath(); g.arc(X(i), Y(meas[i]), 2, 0, Math.PI * 2); g.fill(); }
+    g.globalAlpha = 1;
+    function line(arr, color, w) { g.beginPath(); for (var i = 0; i < n; i++) { var x = X(i), y = Y(arr[i]); i ? g.lineTo(x, y) : g.moveTo(x, y); } g.strokeStyle = color; g.lineWidth = w; g.lineJoin = 'round'; g.stroke(); }
+    line(truth, ink, 1.6); line(est, acc, 2.8);
+  }
+  $('#kR').addEventListener('input', runK); $('#kQ').addEventListener('input', runK);
+  $('#kNew').addEventListener('click', function () { reseed(); kShown = KN; runK(); });
+  if ('ResizeObserver' in window) new ResizeObserver(sizeK).observe(kd); else window.addEventListener('resize', sizeK);
+  new MutationObserver(function () { drawK(); }).observe(d, { attributes: true, attributeFilter: ['data-theme'] });
+  reseed();
+  if (!RM && 'IntersectionObserver' in window) {
+    kShown = 0;
+    var kio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (!e.isIntersecting) return; kio.disconnect(); var t0 = null; (function st(ts) { if (t0 === null) t0 = ts; var pr = Math.min(1, (ts - t0) / 2200); kShown = KN * (1 - Math.pow(1 - pr, 2)); drawK(); if (pr < 1) requestAnimationFrame(st); })(performance.now()); }); }, { threshold: 0.35 });
+    kio.observe(kd);
+  }
+  runK(); sizeK();
+
+  /* ---------- language-dependent bits ---------- */
+  var titles = { fa: 'رویا حامدی · مهندس هوش مصنوعی و داده', en: 'Roya Hamedi · AI & Data Engineer' };
+  function onLang() {
+    document.title = titles[d.lang] || titles.en;
+    update(); runK(); buildCmd(); $('#cmdIn').placeholder = tx('رفتن به یک بخش یا اجرای دستور…', 'Go to a section or run a command…');
+  }
+  new MutationObserver(onLang).observe(d, { attributes: true, attributeFilter: ['lang'] });
+
+  /* ---------- vCard ---------- */
+  function saveVcf() {
+    var v = 'BEGIN:VCARD\r\nVERSION:3.0\r\nN:Hamedi;Roya;;;\r\nFN:Roya Hamedi\r\nTITLE:AI & data engineer\r\nORG:University of Zanjan\r\nTEL;TYPE=CELL:09964459874\r\nEMAIL:missroyahamedi@gmail.com\r\nADR:;;;Tabriz;;;Iran\r\nEND:VCARD\r\n';
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([v], { type: 'text/vcard' })); a.download = 'roya-hamedi.vcf';
+    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  }
+  $('#vcf').addEventListener('click', saveVcf);
+  var cvb = $('#cvBtn'); if (cvb) cvb.addEventListener('click', function () { window.print(); });
+
+  /* ---------- command palette ---------- */
+  var cmd = $('#cmd'), cin = $('#cmdIn'), clist = $('#cmdList'), items = [], sel = 0, lastFocus = null;
+  function go(id) { var el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'start' }); }
+  function buildCmd() {
+    var S = [['research', 'پژوهش', 'Research'], ['skills', 'مهارت‌ها', 'Skills'], ['universities', 'دانشگاه‌ها', 'Universities'], ['projects', 'پروژه‌ها', 'Projects'], ['lab', 'آزمایشگاه', 'Lab'], ['honors', 'افتخارات', 'Honors'], ['notes', 'یادداشت‌ها', 'Notes'], ['reading', 'مقاله‌ها', 'Papers'], ['contact', 'تماس', 'Contact']];
+    items = S.map(function (s) { return { k: s[1] + ' ' + s[2], label: tx(s[1], s[2]), hint: '#' + s[0], run: function () { go(s[0]); } }; });
+    items.push(
+      { k: 'language زبان فارسی english', label: tx('تغییر زبان به English', 'Switch language to فارسی'), hint: 'FA / EN', run: function () { $('.seg button[data-l="' + (isFa() ? 'en' : 'fa') + '"]').click(); } },
+      { k: 'theme تم تیره روشن dark light', label: tx('تغییر تم تیره / روشن', 'Toggle dark / light theme'), hint: tx('تم', 'theme'), run: function () { $('#themeBtn').click(); } },
+      { k: 'copy phone کپی شماره تلفن', label: tx('کپی شماره تماس', 'Copy phone number'), hint: tx('تماس', 'contact'), run: function () { var b = $('.copy[data-copy="phone"]'); b && b.click(); } },
+      { k: 'save contact vcard ذخیره مخاطب', label: tx('ذخیره مخاطب (vCard)', 'Save contact (vCard)'), hint: '.vcf', run: saveVcf },
+      { k: 'print pdf چاپ', label: tx('چاپ / ذخیره PDF', 'Print / save as PDF'), hint: 'Ctrl P', run: function () { window.print(); } },
+      { k: 'top بالا', label: tx('برگشت به بالا', 'Back to top'), hint: '↑', run: function () { window.scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' }); } }
+    );
+    renderCmd();
+  }
+  function renderCmd() {
+    var q = cin.value.trim().toLowerCase();
+    var list = items.filter(function (it) { return !q || it.k.toLowerCase().indexOf(q) > -1 || it.label.toLowerCase().indexOf(q) > -1; });
+    clist.innerHTML = '';
+    if (!list.length) { var e = document.createElement('li'); e.className = 'empty'; e.setAttribute('role', 'presentation'); e.textContent = tx('نتیجه‌ای پیدا نشد', 'No results'); clist.appendChild(e); }
+    list.forEach(function (it, i) {
+      var li = document.createElement('li'); li.setAttribute('role', 'option'); li.id = 'cmd-o' + i;
+      var a = document.createElement('span'); a.textContent = it.label; var h = document.createElement('small'); h.textContent = it.hint; li.appendChild(a); li.appendChild(h);
+      li.addEventListener('click', function () { closeCmd(); it.run(); });
+      li.addEventListener('pointermove', function () { setSel(i, list); });
+      clist.appendChild(li);
+    });
+    clist._list = list; setSel(0, list);
+  }
+  function setSel(i, list) { sel = i; $$('li[role=option]', clist).forEach(function (li, j) { li.setAttribute('aria-selected', j === i ? 'true' : 'false'); if (j === i) { li.scrollIntoView({ block: 'nearest' }); cin.setAttribute('aria-activedescendant', li.id); } }); }
+  function openCmd() { lastFocus = document.activeElement; cin.value = ''; cmd.classList.add('open'); renderCmd(); cin.focus(); }
+  function closeCmd() { cmd.classList.remove('open'); if (lastFocus && lastFocus.focus) lastFocus.focus(); }
+  cin.addEventListener('input', renderCmd);
+  cin.addEventListener('keydown', function (e) {
+    var list = clist._list || [];
+    if (e.key === 'ArrowDown') { e.preventDefault(); setSel((sel + 1) % Math.max(1, list.length), list); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); setSel((sel - 1 + list.length) % Math.max(1, list.length), list); }
+    else if (e.key === 'Enter') { e.preventDefault(); if (list[sel]) { var it = list[sel]; closeCmd(); it.run(); } }
+    else if (e.key === 'Tab') { e.preventDefault(); }
+  });
+  cmd.addEventListener('mousedown', function (e) { if (e.target === cmd) closeCmd(); });
+  document.addEventListener('keydown', function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); cmd.classList.contains('open') ? closeCmd() : openCmd(); }
+    else if (e.key === 'Escape' && cmd.classList.contains('open')) closeCmd();
+  });
+  $('#cmdBtn').addEventListener('click', openCmd);
+  onLang();
+})();
+</script>
+
+<script>
+/* hero signal: layered speech-like waveforms that swell toward the pointer */
+(function () {
+  var c = document.getElementById('sig'); if (!c) return;
+  var g = c.getContext('2d'), d = document.documentElement, hero = c.parentElement;
+  var RM = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var w = 0, h = 0, vis = true, bx = -1, bs = 0, bt = 0, col = { a: '#8FA2FF', b: '#F4A9BA' };
+  function colors() { var cs = getComputedStyle(d); col.a = cs.getPropertyValue('--accent').trim() || col.a; col.b = cs.getPropertyValue('--accent2').trim() || col.b; }
+  function size() { var r = c.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2); w = r.width; h = r.height; c.width = Math.max(1, Math.round(w * dpr)); c.height = Math.max(1, Math.round(h * dpr)); g.setTransform(dpr, 0, 0, dpr, 0, 0); draw(RM ? 1.6 : last); }
+  var last = 0, N = 6;
+  function draw(t) {
+    g.clearRect(0, 0, w, h); if (!w) return;
+    bs += (bt - bs) * 0.06;
+    var mid = h * 0.62;
+    for (var k = 0; k < N; k++) {
+      g.beginPath();
+      var f = 0.006 + k * 0.0017, sp = 0.5 + k * 0.17, base = h * (0.075 + k * 0.026);
+      for (var x = 0; x <= w + 4; x += 4) {
+        var env = Math.pow(Math.sin(Math.PI * Math.min(1, Math.max(0, x / w))), 1.1);
+        var mod = 0.55 + 0.45 * Math.sin(x * 0.0035 - t * 0.55 + k * 1.3);
+        var bump = bx >= 0 ? Math.exp(-Math.pow((x - bx) / (w * 0.13), 2)) * bs : 0;
+        var y = mid + Math.sin(x * f + t * sp + k * 0.9) * base * env * mod * (1 + bump * 1.6)
+                    + Math.sin(x * f * 2.3 - t * sp * 0.7) * base * 0.28 * env;
+        x === 0 ? g.moveTo(x, y) : g.lineTo(x, y);
+      }
+      g.strokeStyle = k === N - 2 ? col.b : col.a; g.lineWidth = k === N - 1 ? 1.8 : 1.2;
+      g.globalAlpha = k === N - 2 ? 0.45 : 0.12 + 0.5 * (k / (N - 1)); g.stroke();
+    }
+    g.globalAlpha = 1;
+  }
+  function frame(ts) { last = ts / 1000; if (vis) draw(last); requestAnimationFrame(frame); }
+  window.addEventListener('pointermove', function (e) {
+    var r = hero.getBoundingClientRect(), cr = c.getBoundingClientRect();
+    if (e.clientY >= r.top && e.clientY <= r.bottom) { bx = e.clientX - cr.left; bt = 1; } else { bt = 0; }
+  }, { passive: true });
+  hero.addEventListener('pointerleave', function () { bt = 0; });
+  if ('ResizeObserver' in window) new ResizeObserver(size).observe(c); else window.addEventListener('resize', size);
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { vis = es[0].isIntersecting; }).observe(c);
+  new MutationObserver(function () { colors(); draw(RM ? 1.6 : last); }).observe(d, { attributes: true, attributeFilter: ['data-theme'] });
+  if (window.matchMedia) { var mq = matchMedia('(prefers-color-scheme: light)'); if (mq.addEventListener) mq.addEventListener('change', function () { colors(); draw(RM ? 1.6 : last); }); }
+  colors(); size();
+  if (!RM) requestAnimationFrame(frame);
+})();
+</script>
+<script>(function(){var $=function(i){return document.getElementById(i)},K=function(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()},fa=function(){return document.documentElement.lang==='fa'};
+var c=$('rbC');if(!c)return;var x=c.getContext('2d'),pc=$('rbP'),p=pc.getContext('2d');x.scale(2,2);p.scale(2,2);
+var t=0,last=0,man=null,f1=[360,175],f2=[360,175],tl=[],tr=[],th=[],eR=1e-6,eT=1e-6,flash=0,vis=true,fr=0,col={};
+function pt(e){var r=c.getBoundingClientRect();return[(e.clientX-r.left)/r.width*520,(e.clientY-r.top)/r.height*300]}
+c.addEventListener('pointerdown',function(e){man=pt(e);c.setPointerCapture(e.pointerId)});c.addEventListener('pointermove',function(e){if(man)man=pt(e)});['pointerup','pointercancel'].forEach(function(n){c.addEventListener(n,function(){man=null})});
+if(window.IntersectionObserver)new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(c);
+function line(a,b,w,s){x.beginPath();x.moveTo(a[0],a[1]);x.lineTo(b[0],b[1]);x.lineWidth=w;x.strokeStyle=s;x.lineCap='round';x.stroke()}
+function trail(a,s,w){if(a.length<2)return;x.beginPath();x.moveTo(a[0][0],a[0][1]);for(var i=1;i<a.length;i++)x.lineTo(a[i][0],a[i][1]);x.lineWidth=w;x.strokeStyle=s;x.stroke()}
+function dot(a,r,f,s){x.beginPath();x.arc(a[0],a[1],r,0,7);x.fillStyle=f;x.fill();if(s){x.lineWidth=2.5;x.strokeStyle=s;x.stroke()}}
+function frame(ts){requestAnimationFrame(frame);if(!vis)return;var dt=Math.min(.05,(ts-last)/1000||.016);last=ts;t+=dt;
+if(fr++%30===0){['--bg','--surface2','--line','--accent','--accent2','--ink','--muted'].forEach(function(n){col[n]=K(n)})}
+var clean=man||[360+150*Math.sin(.5*t),175+55*Math.sin(.8*t+1)],A=+$('rbA').value,hand=[clean[0]+A*(Math.sin(62.8*t)+.6*Math.sin(58.4*t+1)),clean[1]+A*Math.cos(69*t)],
+fc=+$('rbFc').value,a=1-Math.exp(-6.2832*fc*dt),on=$('rbF').checked,r=+$('rbS').value;$('rbSv').textContent=r+':1';
+if(on){for(var i=0;i<2;i++){f1[i]+=a*(hand[i]-f1[i]);f2[i]+=a*(f1[i]-f2[i])}}else{f1=hand.slice();f2=hand.slice()}
+var map=function(h){return[360+(h[0]-360)/r,170+(h[1]-175)/r]},tip=map(f2),raw=map(hand),ex=(tip[0]-360)/170,ey=(tip[1]-170)/62,n=Math.hypot(ex,ey);
+if($('rbL').checked&&n>1){tip=[360+ex/n*170,170+ey/n*62];flash=25}if(flash>0)flash--;
+eR+=.02*(Math.pow(hand[0]-clean[0],2)+Math.pow(hand[1]-clean[1],2)-eR);eT+=.02*((Math.pow(f2[0]-clean[0],2)+Math.pow(f2[1]-clean[1],2))/(r*r)-eT);
+tl.push(tip);tr.push(raw);if(tl.length>140){tl.shift();tr.shift()}th.push([hand[0]-clean[0],(f2[0]-clean[0])/r]);if(th.length>260)th.shift();
+var dx=tip[0]-360,dy=tip[1]-105,L=Math.hypot(dx,dy),ux=dx/L,uy=dy/L,E=[360-ux*150,105-uy*150],B=[40,28],vx=E[0]-B[0],vy=E[1]-B[1],V=Math.hypot(vx,vy),O=[(B[0]+E[0])/2-vy/V*34,(B[1]+E[1])/2+vx/V*34];
+x.clearRect(0,0,520,300);x.fillStyle=col['--surface2'];x.globalAlpha=.7;x.fillRect(0,105,520,195);x.globalAlpha=1;line([0,105],[520,105],2,col['--line']);
+x.save();x.setLineDash([5,5]);x.beginPath();x.ellipse(360,170,170,62,0,0,7);x.lineWidth=1.5;x.strokeStyle=flash?'#ff5470':col['--line'];x.stroke();x.restore();
+trail(tr,col['--accent2'],1);trail(tl,col['--accent'],2.2);
+x.fillStyle=col['--bg'];x.strokeStyle=col['--accent'];x.lineWidth=2;x.fillRect(12,8,56,40);x.strokeRect(12,8,56,40);
+line(B,O,10,col['--accent']);line(O,E,8,col['--accent']);line(E,tip,3.5,col['--ink']);dot(O,7,col['--bg'],col['--accent']);dot(E,6,col['--bg'],col['--accent']);
+var ro=t*1.5,op=.35+.25*Math.sin(t*2.2);[1,-1].forEach(function(s){line(tip,[tip[0]+Math.cos(Math.atan2(dy,dx)+s*op+ro*0)*11,tip[1]+Math.sin(Math.atan2(dy,dx)+s*op)*11],3,col['--accent2'])});
+dot([360,105],9,col['--bg'],col['--accent2']);x.font='12px sans-serif';x.fillStyle=col['--muted'];x.fillText(fa()?'بافت':'Tissue',12,128);x.fillStyle=col['--accent2'];x.fillText('RCM',376,92);x.fillStyle=col['--muted'];x.fillText(fa()?'ارابه بیمار':'Patient cart',14,62);
+if(flash){x.fillStyle='#ff5470';x.fillText(fa()?'حد ایمنی فعال شد':'SAFETY LIMIT',200,22)}
+p.clearRect(0,0,520,70);p.strokeStyle=col['--line'];p.lineWidth=1;p.beginPath();p.moveTo(0,35);p.lineTo(520,35);p.stroke();
+[[0,col['--accent2']],[1,col['--accent']]].forEach(function(q){p.beginPath();th.forEach(function(v,i){var X=i*2,Y=35-v[q[0]]*4;i?p.lineTo(X,Y):p.moveTo(X,Y)});p.lineWidth=1.5;p.strokeStyle=q[1];p.stroke()});
+p.fillStyle=col['--muted'];p.font='11px sans-serif';p.fillText(fa()?'لرزش در محور X: خام (صورتی) و نوک (آبی)':'Tremor on X: raw (pink) vs tip (blue)',6,12);
+if(fr%6===0){var red=eR>1e-4?Math.max(0,1-Math.sqrt(eT/eR))*100:0;$('rbO').textContent='pitch '+(Math.atan2(dx,dy)*180/Math.PI).toFixed(1)+'\u00b0 \u00b7 insertion '+(L*.1).toFixed(1)+' cm \u00b7 roll '+((t*40)%360).toFixed(0)+'\u00b0 \u00b7 tremor \u2193 '+red.toFixed(0)+'% \u00b7 lag \u2248 '+(on?(2/(6.2832*fc)*1000).toFixed(0):0)+' ms'}}
+requestAnimationFrame(frame)})();</script>
+<script>(function(){var $=function(i){return document.getElementById(i)},K=function(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()};if(!$('vIn'))return;
+function fft(re,im){var n=re.length,i,j=0,t,k;for(i=1;i<n;i++){var b=n>>1;for(;j&b;b>>=1)j^=b;j^=b;if(i<j){t=re[i];re[i]=re[j];re[j]=t;t=im[i];im[i]=im[j];im[j]=t}}
+for(var l=2;l<=n;l<<=1){var g=-6.2832/l,wr=Math.cos(g),wi=Math.sin(g);for(i=0;i<n;i+=l){var cr=1,ci=0;for(k=0;k<l/2;k++){var u=i+k,v=u+l/2,xr=re[v]*cr-im[v]*ci,xi=re[v]*ci+im[v]*cr;re[v]=re[u]-xr;im[v]=im[u]-xi;re[u]+=xr;im[u]+=xi;var q=cr*wr-ci*wi;ci=cr*wi+ci*wr;cr=q}}}}
+function M(l,v,u,w){return '<div class="'+(w?'w':'')+'">'+l+'<b>'+v+'</b>'+(u||'')+'</div>'}
+function V(x,sr){var d=Math.max(1,Math.round(sr/11025)),n=Math.min(Math.floor(x.length/d),Math.floor(sr/d*10)),y=new Float32Array(n),i,j,fs=sr/d,G=0;
+for(i=0;i<n;i++){var s=0;for(j=0;j<d;j++)s+=x[i*d+j];y[i]=s/d;G=Math.max(G,Math.abs(y[i]))}
+var N=Math.round(.04*fs),H=Math.round(.01*fs),a=Math.floor(fs/400),b=Math.ceil(fs/70),T=[],A=[],R=[],last=-9,pairs=[];
+for(var f=0;f+N+b+2<n;f+=H){var e=0,pk=0;for(i=0;i<N;i++){e+=y[f+i]*y[f+i];pk=Math.max(pk,Math.abs(y[f+i]))}if(pk<.1*G||e<=0)continue;var cc=[],bl=0,bv=-1;
+for(var l=a-1;l<=b+1;l++){var q=0;for(i=0;i<N;i++)q+=y[f+i]*y[f+i+l];cc[l]=q/e;if(l>=a&&l<=b&&cc[l]>bv){bv=cc[l];bl=l}}
+if(bv<.5)continue;var dn=cc[bl-1]-2*cc[bl]+cc[bl+1],per=(bl+(dn?(cc[bl-1]-cc[bl+1])/(2*dn):0))/fs,k=T.length;T.push(per);A.push(pk);R.push(Math.min(bv,.999));if(last===f-H)pairs.push(k);last=f}
+var o=$('vO');if(T.length<8){o.innerHTML='<div class="w">'+(document.documentElement.lang==='fa'?'صدای واکدار کافی یافت نشد':'Not enough voiced speech')+'</div>';draw(y,fs);return}
+var mean=function(a){return a.reduce(function(s,v){return s+v},0)/a.length},mT=mean(T),F=T.map(function(v){return 1/v}),mF=mean(F),sdF=Math.sqrt(mean(F.map(function(v){return Math.pow(v-mF,2)}))),
+jt=0,sh=0;pairs.forEach(function(k){jt+=Math.abs(T[k]-T[k-1]);sh+=Math.abs(A[k]-A[k-1])});var np=Math.max(1,pairs.length),jit=jt/np/mT*100,shi=sh/np/mean(A)*100,hnr=mean(R.map(function(r){return 10*Math.log10(r/(1-r))})),cen=draw(y,fs);
+window.RHv=[mF,sdF,jit,shi,hnr,cen,T.length];o.innerHTML=M('F0 mean',mF.toFixed(1),' Hz')+M('F0 SD',sdF.toFixed(1),' Hz')+M('Jitter',jit.toFixed(2),' %',jit>1.04)+M('Shimmer',shi.toFixed(2),' %',shi>3.81)+M('HNR',hnr.toFixed(1),' dB',hnr<7)+M('Centroid',cen.toFixed(0),' Hz')+M('Voiced',T.length,' frames')}
+function draw(y,fs){var c=$('vC'),x=c.getContext('2d'),W=c.width,Hh=c.height;x.fillStyle=K('--bg');x.fillRect(0,0,W,Hh);x.strokeStyle=K('--accent');x.lineWidth=1.5;x.beginPath();var st=Math.max(1,Math.floor(y.length/W));
+for(var i=0;i<W;i++){var m=0;for(var j=0;j<st;j++)m=Math.max(m,Math.abs(y[i*st+j]||0));x.moveTo(i,110-m*95);x.lineTo(i,110+m*95)}x.stroke();
+var n=512,hop=Math.max(1,Math.floor((y.length-n)/W)),img=x.createImageData(W,190),sp=new Float64Array(n/2),cnt=0;
+for(var cI=0;cI<W;cI++){var re=new Float64Array(n),im=new Float64Array(n),o=cI*hop;if(o+n>y.length)break;for(var i2=0;i2<n;i2++)re[i2]=y[o+i2]*(.5-.5*Math.cos(6.2832*i2/n));fft(re,im);cnt++;
+for(var k=0;k<n/2;k++){var P=re[k]*re[k]+im[k]*im[k];sp[k]+=P;var v=Math.max(0,Math.min(1,(10*Math.log10(P+1e-12)+70)/60)),yy=189-Math.floor(k/(n/2)*190),ix=(yy*W+cI)*4;if(yy>=0&&yy<190){img.data[ix]=40+v*215;img.data[ix+1]=60+v*150;img.data[ix+2]=120+v*135;img.data[ix+3]=255}}}
+x.putImageData(img,0,200-0);var s1=0,s2=0;for(var q=0;q<n/2;q++){s1+=q*fs/n*sp[q];s2+=sp[q]}return s2?s1/s2:0}
+$('vIn').onchange=function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){var ac=new (window.AudioContext||window.webkitAudioContext)();ac.decodeAudioData(r.result,function(b){V(b.getChannelData(0),b.sampleRate)},function(){$('vO').innerHTML='<div class="w">Unsupported audio</div>'})};r.readAsArrayBuffer(f)};
+/* iris */
+var W=320,H=240,codes={};
+function seg(g){var s=Array.prototype.slice.call(g).sort(function(a,b){return a-b}),th=s[Math.floor(s.length*.06)],xs=[],ys=[],i;for(i=0;i<g.length;i++)if(g[i]<=th){xs.push(i%W);ys.push(Math.floor(i/W))}
+var md=function(a){return a.slice().sort(function(p,q){return p-q})[a.length>>1]},cx=md(xs),cy=md(ys),px=[];for(i=0;i<xs.length;i++)if(Math.hypot(xs[i]-cx,ys[i]-cy)<45)px.push(i);
+var rp=Math.max(8,Math.sqrt(px.length/Math.PI)),m=[],best=-1e9,rl=rp*2.6,R;for(R=Math.round(rp*1.5);R<Math.min(rp*4.2,110);R++){var sum=0,c=0;for(var d=-40;d<=40;d+=5)[0,180].forEach(function(o){var th=(d+o)*Math.PI/180,X=Math.round(cx+R*Math.cos(th)),Y=Math.round(cy+R*Math.sin(th));if(X>=0&&X<W&&Y>=0&&Y<H){sum+=g[Y*W+X];c++}});m[R]=c?sum/c:0}
+for(R=Math.round(rp*1.5)+3;R<Math.min(rp*4.2,110)-3;R++){var gr=m[R+3]-m[R-3];if(gr>best){best=gr;rl=R}}return{cx:cx,cy:cy,rp:rp,rl:rl}}
+function code(g,o){var S=[],i,j;for(i=0;i<32;i++){var row=[],r=o.rp+(o.rl-o.rp)*(i+.5)/32,m=0;for(j=0;j<256;j++){var th=6.2832*j/256,X=Math.round(o.cx+r*Math.cos(th)),Y=Math.round(o.cy+r*Math.sin(th)),v=X>=0&&X<W&&Y>=0&&Y<H?g[Y*W+X]:0;row.push(v);m+=v}m/=256;S.push(row.map(function(v){return v-m}))}
+var bits=[];for(var b=0;b<16;b++)for(var q=0;q<64;q++){var re=0,im=0;for(var k=-16;k<=16;k++){var s=(S[2*b][(4*q+k+256)%256]+S[2*b+1][(4*q+k+256)%256])/2,w=Math.exp(-Math.pow(k/8,2));re+=s*w*Math.cos(6.2832*k/16);im+=s*w*Math.sin(6.2832*k/16)}bits.push(re>=0?1:0,im>=0?1:0)}return{S:S,bits:bits}}
+function iris(id,sid,key,file){var img=new Image();img.onload=function(){var c=$(id),x=c.getContext('2d');x.drawImage(img,0,0,W,H);if(key==='A')window.RHi=x.getImageData(0,0,W,H);var d=x.getImageData(0,0,W,H),g=new Float32Array(W*H);for(var i=0;i<W*H;i++)g[i]=.3*d.data[i*4]+.59*d.data[i*4+1]+.11*d.data[i*4+2];
+var o=seg(g),cd=code(g,o);x.lineWidth=2;[[o.rp,K('--accent2')],[o.rl,K('--accent')]].forEach(function(a){x.beginPath();x.arc(o.cx,o.cy,a[0],0,7);x.strokeStyle=a[1];x.stroke()});
+var sc=$(sid),sx=sc.getContext('2d'),im=sx.createImageData(256,32);for(var j=0;j<32;j++)for(var k=0;k<256;k++){var v=Math.max(0,Math.min(255,128+cd.S[j][k]*2.2)),z=(j*256+k)*4;im.data[z]=im.data[z+1]=im.data[z+2]=v;im.data[z+3]=255}sx.putImageData(im,0,0);
+codes[key]=cd.bits;cmp(o,key)};img.src=URL.createObjectURL(file)}
+var info={};function cmp(o,key){info[key]=o;var ph=document.documentElement.lang==='fa';var h='';['A','B'].forEach(function(k){if(info[k])h+=M(ph?'مردمک '+k:'Pupil '+k,info[k].rp.toFixed(0),' px')+M(ph?'عنبیه '+k:'Iris '+k,info[k].rl.toFixed(0),' px')});
+if(codes.A&&codes.B){var mn=1;for(var s=-4;s<=4;s++){var df=0;for(var b=0;b<16;b++)for(var q=0;q<64;q++)for(var u=0;u<2;u++)if(codes.A[(b*64+q)*2+u]!==codes.B[(b*64+(q+s+64)%64)*2+u])df++;mn=Math.min(mn,df/2048)}h+=M('Hamming',mn.toFixed(3),'',mn>=.32)+M(ph?'تصمیم':'Decision',mn<.32?(ph?'همان چشم':'Same eye'):(ph?'چشم دیگر':'Different eye'),'',mn>=.32)}$('iO').innerHTML=h}
+$('iA').onchange=function(e){if(e.target.files[0])iris('iCa','iSa','A',e.target.files[0])};$('iB').onchange=function(e){if(e.target.files[0])iris('iCb','iSb','B',e.target.files[0])};
+})();</script>
+<script>(function(){var $=function(i){return document.getElementById(i)},fa=function(){return document.documentElement.lang==='fa'};if(!$('mR'))return;
+var base='https://cdn.jsdelivr.net/npm/onnxruntime-web@1.17.3/dist/',ld;
+function lib(){if(window.ort)return Promise.resolve();return ld||(ld=new Promise(function(ok,no){var e=document.createElement('script');e.src=base+'ort.min.js';e.onload=function(){ort.env.wasm.wasmPaths=base;ok()};e.onerror=function(){ld=null;no(new Error(fa()?'کتابخانه ONNX بارگذاری نشد (اینترنت؟)':'Could not load ONNX runtime (offline?)'))};document.head.appendChild(e)}))}
+function out(h){$('mO').innerHTML=h}function M(l,v,w){return '<div class="'+(w?'w':'')+'">'+l+'<b>'+v+'</b></div>'}
+function pr(d){var a=Array.prototype.slice.call(d);if(a.length===1){var v=a[0];if(v<0||v>1)v=1/(1+Math.exp(-v));return[['p',v]]}var mx=Math.max.apply(null,a),e=a.map(function(v){return Math.exp(v-mx)}),z=e.reduce(function(s,v){return s+v},0);return e.map(function(v,i){return['class '+i,v/z]}).sort(function(p,q){return q[1]-p[1]}).slice(0,3)}
+$('mR').onclick=function(){var f=$('mF').files[0],ty=$('mT').value;if(!f)return out(M('',fa()?'ابتدا فایل .onnx را انتخاب کنید':'Choose an .onnx file first',1));
+if(ty==='v'&&!window.RHv)return out(M('',fa()?'ابتدا یک صدا تحلیل کنید':'Analyse a voice first',1));if(ty==='i'&&!window.RHi)return out(M('',fa()?'ابتدا تصویر A را بارگذاری کنید':'Load image A first',1));
+out(M('','…'));var sess;lib().then(function(){return f.arrayBuffer()}).then(function(b){return ort.InferenceSession.create(new Uint8Array(b),{executionProviders:['wasm']})}).then(function(s){sess=s;var nm=s.inputNames[0],md=(s.inputMetadata&&s.inputMetadata[nm])||{},dm=md.shape||md.dimensions||[],t;
+if(ty==='v'){var n=dm.length?dm[dm.length-1]:7;if(typeof n==='number'&&n!==7)throw new Error((fa()?'مدل ':'Model expects ')+n+(fa()?' ورودی می‌خواهد، نه ۷':' inputs, not 7'));t=new ort.Tensor('float32',Float32Array.from(window.RHv),[1,7])}
+else{var C=typeof dm[1]==='number'?dm[1]:3,Hh=typeof dm[2]==='number'?dm[2]:224,Ww=typeof dm[3]==='number'?dm[3]:224,cv=document.createElement('canvas');cv.width=Ww;cv.height=Hh;var im=document.createElement('canvas');im.width=320;im.height=240;im.getContext('2d').putImageData(window.RHi,0,0);var cx=cv.getContext('2d');cx.drawImage(im,0,0,Ww,Hh);var d=cx.getImageData(0,0,Ww,Hh).data,a=new Float32Array(C*Hh*Ww);
+for(var i=0;i<Hh*Ww;i++){if(C===1)a[i]=(.3*d[i*4]+.59*d[i*4+1]+.11*d[i*4+2])/255;else for(var c=0;c<C;c++)a[c*Hh*Ww+i]=d[i*4+Math.min(c,2)]/255}t=new ort.Tensor('float32',a,[1,C,Hh,Ww])}
+var fd={};fd[nm]=t;return s.run(fd)}).then(function(r){var o=r[sess.outputNames[0]],h=pr(o.data).map(function(q){return M(q[0],(q[1]*100).toFixed(1)+' %')}).join('');out(h+M(fa()?'خروجی':'Output','['+Array.prototype.slice.call(o.data,0,6).map(function(v){return v.toFixed(3)}).join(', ')+']'))}).catch(function(e){out(M('Error',String(e.message||e).slice(0,160),1))})}
+})();</script>
+</body>
+</html>
